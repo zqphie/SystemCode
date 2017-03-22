@@ -1,0 +1,35 @@
+*{
+        margin: 0px;
+        padding: 0px;
+    }
+    table{
+        margin: 0px auto;
+        border: 0px;
+        background-color: #FF00FF;
+    }
+    tr {
+        width: 100px;
+        height: 30px;
+        background-color: #FFFFFF;
+    }
+    td {
+        width: 100px;
+        text-align: center;
+    }
+    th{
+        width: 100px;
+        text-align: center; 
+        background-color: #FF8040;
+    }
+    p{
+        font-size: 30px;
+        font-weight: bold;
+        color: #000000;
+        text-align: center;
+        margin: 10px auto;
+    }
+    .tr_Header{
+        font-size: 20px;
+        font-weight: bold;
+        color: #000000;
+    }
