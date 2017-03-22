@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易计算器</title>
+</head>
+<body>
+	<div class="container">
+		<!-- 数字1 -->
+		<input type="text" name="text" id="firstNumber"  onkeypress="keyPress()" maxlength="10"/>
+		<!-- 运算符 -->
+		<select  id="operator"> 
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+		<!-- 数字2 -->
+		<input type="text" name="text" id="secondNumber" onkeypress="keyPress()" maxlength="10"/>
+		<span>=</span>
+		<!-- 结果显示框 -->
+		<input type="text" name="text" id="result" readonly="true">
+		<input type="button" id="btn" value="运算" onclick="calculator();">
+	</div>
+	<!-- 外部js代码引用 -->
+	<script type="text/javascript" src="./js/calculator.js"></script>
+</body>
+</html>

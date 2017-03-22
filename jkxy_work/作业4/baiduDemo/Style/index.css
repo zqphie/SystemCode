@@ -1,0 +1,354 @@
+*{
+	margin:0;
+	padding: 0;
+}
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+	font: 12px arial;
+	cursor: default;
+}
+.wrapper{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	min-height: 600px;
+	min-width: 810px;
+}
+/*头部样式*/
+header{
+	overflow: hidden;
+}
+header nav{
+	float: right;
+	margin: 19px 0 5px 0;
+	padding: 0 146px 0 0;
+}
+header nav a{
+	display: inline-block;
+	margin-left: 20px;
+	color: #333;
+	font-weight: bold;
+	line-height: 24px;
+	font-size: 13px;
+}
+header nav a:hover{
+	color: #00c;
+}
+header nav .lnav{
+	font-weight:normal;
+}
+/*设置*/
+.setting-menu{
+	position:absolute;
+	width: 46px;
+	right: 95px;
+	top: 20px;
+}
+.setting-menu .baidu-nav{
+	font-weight:normal;
+}
+.setting-menu .baidu-nav:hover{
+	color: #00c;
+}
+.setting-menu:hover .baidu-setting{
+	display: block;
+}
+.setting-menu .baidu-setting{
+	display: none;
+	position: absolute;
+	top: 25px;
+	left:-2px;
+	width: 70px;
+	border: 1px solid #d1d1d1;
+	text-align: center;
+	z-index: 1;
+}
+.setting-menu .baidu-setting a{
+	margin-left: 0;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+	line-height: 26px;
+	display: block;
+}
+.setting-menu .baidu-setting a:hover{
+	color:#FFFFFF;
+	background-color: #38f;
+}
+.baidu-setting > .setting-icon{
+	top: -11px;
+	right: 30px;
+	width: 0;
+	height: 0;
+	display: block;
+	position: absolute;
+	border:5px solid transparent;
+	border-style: dashed dashed solid dashed;
+	border-bottom-color: #D8d8d8;
+}
+.baidu-setting .setting-icon-after{
+	top: -10px;
+	right: 30px;
+	width: 0;
+	height: 0;
+	display: block;
+	position: absolute;
+	border:5px solid transparent;
+	border-style: dashed dashed solid dashed;
+	border-bottom-color: #FFFFFF;
+	/*behavior: url(./ie-css3.htc);*/
+}
+/*更多产品*/
+.more-menu{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 85px;
+}
+.more_hover{
+	margin-top: 19px;
+}
+.more_hover .more{
+    width: 60px;
+    height: 23px;
+    float: left;
+    color: #FFFFFF;
+    background: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #38f;
+    text-decoration: none;
+    font-weight:normal;
+    margin-left: 12px;
+}
+.more_hover:hover .more-product{
+	display: block;
+}
+.more_hover .more-product{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	bottom: 0;
+	min-height: 600px;
+	width: 85px;
+	border-left: solid 1px #DDD;
+	background-color:#F9F9F9;
+	z-index: 999;
+}
+.more-product ul{
+	list-style-type: none;
+	padding:12px 5px 0 5px;
+	text-align: center;
+	text-align: center\9;
+}
+.more-product li{
+	position: relative;
+	height: 70px;
+	border-bottom:solid 1px #f0f0f0;
+}
+.more-product a{
+	color:#333;
+	font: 12px arial;
+	font-weight: normal;
+	text-decoration:none;
+	margin-left:0px;
+}
+.more-product a:hover{
+	color:#333;
+	text-decoration: underline;
+}
+.more-product span{
+	width: 36px;
+    height: 36px;
+    display: block;
+    margin: 10px auto 5px;
+    background: url(../image/other.png) no-repeat;
+    cursor: pointer;
+}
+.more-product .more-font{
+	width: 70px;
+	height: 30px;
+	padding-top: 12px;
+}
+.more-product .more-font a{
+	cursor: default;
+}
+.more-product .more-font a:hover{
+	text-decoration: none;
+}
+.more-product .picture-music{
+	width: 40px;
+    background-position: -72px 0;
+}
+.more-product .picture-picture{
+    background-position: -112px 0;
+}
+.more-product .picture-know{
+    background-position: -36px 0;
+}
+.more-product .picture-library{
+    background-position: -148px 0;
+}
+.more-product .picture-list{
+    background-position: -184px 0;
+}
+.more-product .picture-extension{
+    background-position: -220px 0;
+}
+.more-product .more-all{
+	padding-top: 15px;
+	border:0;
+}
+.more-all a{
+	text-decoration: underline;
+}
+input{
+	outline: none;
+}
+.content{
+	position: relative;
+	top: 38.2%;
+	text-align: center;
+}
+.content-form{
+	position: relative;
+	top: -191px;
+}
+.content .content-form .lg{
+	text-align: center;
+	line-height: 129px;
+}
+.content .content-form .lg img{
+	width: 270px;
+	height: 129px;
+}
+
+.fm{
+	position: relative;
+	width: 650px;
+	margin: 22px auto 0;
+    z-index: 100;
+}
+/*相机图标设置样式*/
+.content .content-form i{
+	position: absolute;
+	display: inline-block;
+	width:18px;
+	height: 16px;
+	right: 112px;
+	top: 10px;
+	background: url(../image/camera.png) no-repeat;
+	cursor:pointer;
+}
+.content .icon-mike:hover{
+	background-position: 0 -20px;
+}
+
+.content .seach-input{
+	width: 539px;
+	height: 28px;
+	line-height: 28px;
+	border: 1px solid #b6b6b6;
+	padding: 3px 0 3px 7px;
+	border-right-width: 0;
+}
+.content .seach-input:hover{
+	border-color: #999 transparent #b3b3b3 #999;
+}
+.content .seach-input:focus{
+	border-color: #4791FF transparent #4791FF #4791FF;
+}
+/*使用滤镜*/
+button{
+	*filter:Chroma(Color="#000000");
+}
+.content .seach-btn{
+	width: 100px;
+	height: 36px;
+	+margin-top: 1px;
+	margin-left: -5px;
+	color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border: solid 1px #2D78F4;
+    cursor: pointer;
+    vertical-align: top;
+}
+.content .seach-btn:hover{
+	background: #317ef3;
+    border-bottom: 1px solid #2868c8;
+    box-shadow: 1px 1px 1px #ccc;
+}
+/*底部样式*/
+footer{
+	position: absolute;
+	bottom: 50px;
+	width: 100%;
+	*width: auto;
+	padding-top: 50px;
+	text-align: center;
+}
+.end_left{
+	width: 50%;
+	float: left;
+}
+/*手机百度二维码及文字样式,百度糯米二维码及文字样式*/
+.end_left_left,.end_left_right{
+	float: right;
+}
+.end_left_left img,.end_left_right img{
+	float: left;
+	width: 60px;
+	height: 60px;
+}
+.end_left_left div,.end_left_right div{
+	float: left;
+	margin:10px 35px 10px 15px;
+}
+.end_right{
+	width: 50%;
+	float: left;
+}
+footer div p{
+	text-align: left;
+	line-height: 20px;
+	color: #999;
+}
+footer div p a {
+	color: #999;
+}
+footer div p b{
+	color:#666;
+}
+.a_text{
+	margin-left: 68px;
+}
+.a_text1{
+	margin-right: 160px;
+}
+/*底部图片*/
+footer div p i{
+	width: 14px;
+    height: 17px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(../image/db.png) no-repeat;
+    position: relative;
+    top: 3px;
+}
+.c-icon-icrlogo{
+    background-position: -600px -96px;
+}
+.c-icon-jgwablogo{
+	background-position: -623px -96px;
+    margin-right: 6px;
+}

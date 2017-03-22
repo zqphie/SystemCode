@@ -1,0 +1,2114 @@
+/*将这些外边距和内边距设为0*/
+body, button, dd, dl, dt, fieldset, figure, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, select, td, textarea, th, ul{
+	margin: 0;
+	padding:0;
+	font-family: Verdana,"Lantinghei SC","Hiragino Sans GB","Microsoft Yahei",Helvetica,arial,\5b8b\4f53,sans-serif;
+}
+button, h1, h2, h3, h4, h5, h6, input, select, textarea {
+    font-size: 100%;
+    font-weight: 400;
+}
+/*设置的高度与宽度，包括内边距和外边距的值*/
+a, dd, div, dl, i, img, input, li, p, span, ul {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+address, cite, dfn, em, i, var {
+    font-style: normal;
+}
+ol,ul{
+	list-style: none;
+}
+img, input, label, select {
+    vertical-align: middle;
+}
+/*取消a标签的下划线*/
+a{
+	text-decoration: none;
+	color: #333;
+}
+/*宽度*/
+.wid-1000{
+	width: 1000px;
+}
+/*距上边距离*/
+.mar-top20 {
+    margin-top: 20px!important;
+}
+.mar-top40 {
+    margin-top: 40px!important;
+}
+.mar-top10{
+    margin-top: 10px!important;
+}
+.cf{
+	zoom:1;
+}
+.cf:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+/*设置标题的样式*/
+#header{
+	min-height:70px;
+	margin:0 auto;
+	padding: 10px 0;
+}
+/*头部图片*/
+.wrap{
+	position: relative;
+    z-index: 1200;
+    height: 50px;
+}
+/*图片*/
+.logo{
+	float: left;
+	width: 113px;
+	margin-top:5px;
+}
+.header-ad{
+	width: 160px;
+    height: 50px;
+    overflow: hidden;
+    margin-left: 20px;
+    float: left;
+}
+/*头部查询框*/
+.search-section{
+	position: absolute;
+    left: 50%;
+    bottom: 5px;
+    margin: 0 0 0 -190px;
+    width: 380px;
+    height: 38px;
+    border: 1px solid #e4e4e4;
+    z-index: 2000;
+}
+/*输入框*/
+.search-section .search-text {
+    width: 100%;
+    height: 36px;
+    padding: 9px 150px 9px 15px;
+    border: 0;
+    line-height: 18px;
+    color: #333;
+    background: #fff;
+    font-size: 12px;
+    text-align: left;
+    padding-right: 55px;
+}
+.search-section .search-text:focus{
+	outline-style: none;
+}
+/*选中搜索框改变关键词显影*/
+.search-section .search-text:focus ~ .hot-words{
+	display: none;
+}
+/*选中搜索框改变查询按钮样式*/
+.search-section .search-text:focus ~.search-btn{
+	border: 1px solid #35b558;
+    background: #35b558 url(../images/topsearch-icon2_8c8d8b0.png) center center no-repeat!important;
+}
+/*设置查询按钮*/
+.search-section .search-btn {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 40px;
+    height: 38px;
+    border: 1px solid #dfdfdf;
+    color: #6d6d6d;
+    background: url(../images/topsearch-icon_e1f5df2.png) center center no-repeat;
+    cursor: pointer;
+}
+.search-section .search-btn:hover {
+    border: 1px solid #35b558;
+    background: #35b558 url(../images/topsearch-icon2_8c8d8b0.png) center center no-repeat!important;
+}
+/*课程关键词*/
+.search-section .hot-words {
+	display: block;
+    position: absolute;
+    top: 9px;
+    right: 48px;
+    font-size: 12px;
+}
+/*课程关键词 链接*/
+.search-section .hot-words a {
+    display: inline-block;
+    padding: 1px 3px;
+    margin-left: 5px;
+    color: #808080;
+    background: #f3f3f3;
+}
+/*课程关键词 链接 鼠标浮动在上面*/
+.search-section .hot-words a:hover {
+    color: #333;
+    background: #dfdfdf;
+}
+#header .loginbox, #header .loginbox_event {
+    float: right;
+    text-align: right;
+    line-height: 50px;
+    font-size: 12px;
+    color: #333;
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*登录按钮之间的竖线*/
+.loginbox em{
+	padding: 0px 10px;
+}
+/*登录注册按钮*/
+#header .loginbox a,#header .loginbox a:hover{
+	text-decoration: none;
+	color: #333;
+}
+/*提示消息*/
+.my-massage{
+    background: url(../images/massage-icon2_d1369b2.gif) left center no-repeat;
+    background-size: 15px 13px;
+    box-sizing: content-box;
+    text-align: left;
+    padding-left: 12px;
+    position: relative;
+    cursor: pointer;
+}
+/*横线*/
+.loading{
+	width: 100%;
+    height: 2px;
+    overflow: hidden;
+    background: #f3f3f3;
+}
+.loading .loading-line {
+    width: 100%;
+    height: 2px;
+    overflow: hidden;
+    background: #35b558;
+    background: -webkit-gradient(linear,10% 10%,100% 100%,color-stop(0.14,#35b550),color-stop(0.5,#8aca8c),color-stop(1,#2d85ca));
+}
+/*导航栏外框*/
+nav {
+    height: 42px;
+    width: 100%;
+}
+nav a:hover{
+	color: #35b558;
+}
+/*导航栏盒子*/
+.nav-position{
+	height: 42px;
+    position: relative;
+    z-index: 1100;
+    background: #fff;
+    background: rgba(255,255,255,.9);
+    border-bottom: 1px solid #e8e8e8;
+}
+.nav-shadow{
+	 box-shadow: rgba(0,0,0,0.1)0 1px 5px;
+	-webkit-box-shadow: rgba(0,0,0,0.1)0 1px 5px;
+	-moz-box-shadow: rgba(0,0,0,0.1)0 1px 5px;
+	-o-box-shadow: rgba(0,0,0,0.1)0 1px 5px;
+	-ms-box-shadow: rgba(0,0,0,0.1)0 1px 5px;
+}
+/*导航栏区域*/
+.nav-box{
+	height: 42px;
+	position: relative;
+	margin: 0 auto;
+}
+/*导航栏内容*/
+.nav-content{
+	width: 740px;
+}
+.nav-content a {
+	display:inline-block;
+	width:115px;
+	font-size:14px;
+	line-height:42px;
+	color:#333;
+	padding: 0;
+	margin: 0;
+	text-align:center;
+}
+.nav-content a:nth-child(1){
+	padding: 0;
+	margin-right: 20px;
+	width: auto;
+}
+.nav-content:hover .nav-more{
+	display:block;
+}
+/*当浮动到导航栏时，改变扩展栏样式*/
+.nav-content a:nth-child(2):hover ~ .nav-more .panel-item:nth-child(1){
+	background-color: rgb(247,247,247);
+}
+.nav-content a:nth-child(2):hover ~ .nav-more .panel-item:nth-child(1) .angle{
+	display:block;
+}
+.nav-content a:nth-child(3):hover ~ .nav-more .panel-item:nth-child(2){
+	background-color: rgb(247,247,247);
+}
+.nav-content a:nth-child(3):hover ~ .nav-more .panel-item:nth-child(2) .angle{
+	display:block;
+}
+.nav-content a:nth-child(4):hover ~ .nav-more .panel-item:nth-child(3){
+	background-color: rgb(247,247,247);
+}
+.nav-content a:nth-child(4):hover ~ .nav-more .panel-item:nth-child(3) .angle{
+	display:block;
+}
+.nav-content a:nth-child(5):hover ~ .nav-more .panel-item:nth-child(4){
+	background-color: rgb(247,247,247);
+}
+.nav-content a:nth-child(5):hover ~ .nav-more .panel-item:nth-child(4) .angle{
+	display:block;
+}
+/*导航栏内容浮动显示*/
+ul.nav-more{
+	display: none;
+	position: absolute;
+	top:42px;
+	width: 100%;
+	background:rgba(255,255,255,0.97);
+	border:1px solid #e8e8e8;
+	border-top:0;
+	padding-left: 50px;
+}
+ul.nav-more .panel-item{
+	position: relative;
+    width: 120px;
+    margin-left: -1px;
+    border-right: 1px solid #F7F7F7;
+    float: left;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    height: 100%;
+}
+ul.nav-more .panel-item:first-child{
+	border-left:1px solid #f7f7f7;
+}
+/*三角形样式*/
+ul.nav-more .panel-item .angle {
+    display: inline-block;
+    background-image: url(../images/nav-angle_f7c86b6.png);
+    width: 12px;
+    height: 7px;
+    position: absolute;
+    background-size: 100% 100%;
+    top: -7px;
+    left: 54px;
+    display: none;
+}
+ul.nav-more .panel-item .item-box li a{
+	line-height: 29px;
+    display: block;
+    text-align: left;
+    margin-right: 0;
+    font-size: 12px;
+    color: #666;
+}
+ul.nav-more .panel-item .item-box li a:hover{
+	color: #35b558;
+}
+/*导航栏内容其他*/
+.nav-other{
+	height: 44px;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    line-height: 44px;
+    font-size: 12px;
+}
+/*设置超链接*/
+.nav-other a {
+	width: auto!important;
+    font-size: 12px;
+    padding: 0;
+    margin-left: 20px;
+    display: inline-block;
+}
+/*设置超链接 图片*/
+.nav-other a img{
+	float: left;
+    margin-right: 5px;
+    margin-top: 13px;
+}
+.nav-other a:nth-child(1){
+	margin-right: 0!important;
+}
+.nav-other a:nth-child(1) img{
+	margin-top: 14px;
+}
+/*最后一个超链接的最后一张图片*/
+.nav-other a:last-child img:last-child{
+	width: 14px;
+    height: 15px;
+    position: absolute;
+    z-index: 2000;
+    right: -19px;
+    top: -12px;
+    display: block;
+}
+/*综合导航区域*/
+.integrate-nav{
+	width: 100%;
+	height: 373px;
+}
+/*菜单栏*/
+.lesson-classfiy-nav {
+    width: 210px;
+    float: left;
+    height: 373px;
+    border-top: 2px solid #35b558;
+    position: relative;
+    border-right: 0;
+    background: url(../images/nav_r_border_04083a2.jpg) 100% 0 repeat-y;
+}
+.lesson-classfiy-nav ul {
+    position: absolute;
+    z-index: 800;
+    width: 210px;
+    height: 371px;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+}
+/*每个菜单样式*/
+.lesson-classfiy-nav li>div {
+    width: 208px;
+    height: 37px;
+    line-height: 37px;
+    padding: 0 15px;
+    font-size: 13px;
+    color: #333;
+    border-bottom: 1px solid #F5F5F5;
+    background: #fff url(../images/more-icon_d39346f.png) 186px center no-repeat;
+    background-size: 6px 10px;
+    cursor: pointer;
+    font-weight: 400;
+    display: inline-block;
+    text-align:left;
+}
+.lesson-classfiy-nav li>div:hover {
+    color: #333;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    margin-left: -2px;
+    height: 38px;
+    margin-top: -1px;
+    border-left: 2px solid #35b558;
+    padding-left: 18px;
+    border-right: 3px solid #fff;
+    width: 213px;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.1);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,.1);
+    box-shadow: 1px 1px 2px rgba(0,0,0,.1);
+}
+
+.lesson-classfiy-nav li>div>a {
+    color: #333;
+}
+.lesson-classfiy-nav li .lesson-list-show a:hover {
+    color: #35b558;
+}
+.lesson-classfiy-nav li>div:hover .lesson-list-show{
+	display: block;
+}
+/*菜单显示扩展部分*/
+.lesson-classfiy-nav li .lesson-list-show {
+    -webkit-box-shadow: 2px 2px 4px rgba(0,0,0,.1);
+    -moz-box-shadow: 2px 2px 4px rgba(0,0,0,.1);
+    box-shadow: 1px 2px 4px rgba(0,0,0,.1);
+    overflow: hidden;
+    min-height: 373px;
+    min-width: 401px;
+    width: 591px;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    position: absolute;
+    left: 209px;
+    top: -2px;
+    z-index: 100;
+    border-left: 0;
+    padding-bottom: 30px;
+    display: none;
+}
+.lesson-classfiy-nav li .lesson-list-show>div {
+    float: left;
+    width: 590px;
+}
+.lesson-classfiy-nav li .lesson-list-show dl {
+    margin: 0 10px;
+    overflow: hidden;
+}
+.lesson-classfiy-nav li .lesson-list-show dt {
+    display: block;
+    border-bottom: 1px solid #f5f5f5;
+    height: 37px;
+    line-height: 45px;
+}
+.lesson-classfiy-nav li .lesson-list-show dt>a {
+    color: #333;
+    font-size: 13px;
+    font-weight: 400;
+}
+.lesson-classfiy-nav li .lesson-list-show dd {
+    list-style: none;
+    margin-left: -8px;
+    padding: 3px 0;
+}
+.lesson-classfiy-nav li .lesson-list-show dd a {
+    height: 14px;
+    line-height: 14px;
+    margin-bottom: 10px;
+    margin-top: 4px;
+    padding: 0 7px;
+    color: #666;
+    display: inline-block;
+    font-size: 12px;
+    border-left: 1px solid #e0e0e0;
+    float: left;
+    white-space: nowrap;
+    font-weight: 400;
+}
+.lesson-classfiy-nav li .lesson-list-show dd a:last-child {
+    border-right: 0;
+}
+/*轮播图*/
+.lesson-center-focus {
+    width: 560px;
+    float: left;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.index-banner {
+    width: 560px!important;
+    height: 260px;
+    margin-left: auto;
+    background: #ccc;
+    border-right: 0;
+    position: relative;
+}
+.index-banner ul li {
+    float: left;
+}
+.imgList {
+    width: 2800px;
+    position: relative;
+}
+.imgList li {
+    width: 560px;
+}
+.imgList li img {
+	width: 560px;
+    height: 260px;
+}
+/*显示左右切换按钮*/
+.index-banner:hover #banner-left,#banner-right{
+	display: block;
+}
+.index-banner:hover #banner-right{
+	display: block;
+}
+/*左切换按钮*/
+#banner-left{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 800;
+    display: none;
+    cursor: pointer;
+}
+.arrow-left {
+    background: url(../images/banner-left_fe0df34.png) -10px -5px no-repeat;
+    width: 40px;
+    height: 50px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.arrow-left:hover{
+	background: url(../images/banner-left_fe0df34.png) -10px -65px no-repeat;
+}
+/*右切换按钮*/
+#banner-right{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 800;
+    display: none;
+    cursor: pointer;
+}
+.arrow-right {
+    background: url(../images/banner-right_a0bdd7d.png) -10px -5px no-repeat;
+    width: 40px;
+    height: 50px;
+    overflow: hidden;
+}
+.arrow-right:hover{
+	background: url(../images/banner-right_a0bdd7d.png) -10px -65px no-repeat;
+}
+/*切换图标列表*/
+.List{
+	position: absolute;
+    left: 0;
+    text-align: center;
+    bottom: 7px;
+    width: 100%;
+    z-index: 80;
+}
+.dotList{
+	margin: 0 auto;
+    display: inline-block;
+}
+.dotList li {
+    display: inline-block;
+    width: 39px;
+    height: 7px;
+    background: url(../images/swiper1_6a811bf.jpg) center center no-repeat;
+    margin: 0 6px;
+    cursor: pointer;
+}
+.dotList li.on{
+	display: inline-block;
+    width: 39px;
+    height: 7px;
+    background: url(../images/swiper2_78fab30.jpg) center center no-repeat;
+    margin: 0 6px;
+    cursor: pointer;
+}
+/*手动切换轮播图*/
+.focuswork-wrap {
+    position: relative;
+    margin-top: 13px!important;
+    border: 1px solid #E2E2E2;
+    width: 100%;
+    height: 100px!important;
+    overflow: hidden!important;
+}
+.focuswork-wrap:hover .arrow{
+	display: block;
+}
+.focuswork-wrap .wrap-left{
+	left: 0;
+    background: url(../images/focus-nav_4593a01.png) 0 0 no-repeat;
+    background-size: 48px 80px;
+}
+.focuswork-wrap .wrap-left:hover{
+	left: 0;
+	background: url(../images/focus-nav_4593a01.png) 0 -40px no-repeat;
+	background-size: 48px 80px;
+}
+.focuswork-wrap .arrow {
+    display: none;
+    position: absolute;
+    top: 30px;
+    z-index: 200;
+    width: 24px;
+    height: 40px;
+    cursor: pointer;
+}
+.focuswork-wrap .wrap-right{
+    right: 0;
+    background: url(../images/focus-nav_4593a01.png) -24px 0 no-repeat;
+    background-size: 48px 80px;
+}
+.focuswork-wrap .wrap-right:hover{
+	 right: 0;
+	background: url(../images/focus-nav_4593a01.png) -24px -40px no-repeat;
+	background-size: 48px 80px;
+}
+.swiperList{
+	width: 2800px;
+	z-index: 190;
+	position: relative;
+}
+.swiperList li{
+	width: 560px;
+	float: left;
+}
+.lesson-list{
+	width: 560px;
+}
+.focuswork-wrap .lesson-list li {
+    float: left;
+    width: 186.5px!important;
+    height: 100px!important;
+}
+.swiper-slide {
+    position: relative;
+    text-align: center;
+    height: 305px!important;
+}
+.focuswork-wrap .lesson-list .lession-item {
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    border-right: 1px solid #F5F5F5;
+}
+.focuswork-wrap .lesson-list .lession-item .lession-icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 8px auto;
+}
+.focuswork-wrap .lesson-list .lession-item .lession-title {
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 4px;
+}
+.focuswork-wrap .lesson-list .lession-item .intro {
+    font-size: 12px;
+    text-align: center;
+    color: #333;
+}
+/*快讯*/
+.lesson-right-show {
+    width: 210px;
+    float: left;
+    border: 1px solid #E4E4E4;
+    height: 373px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+/*咨询*/
+.lesson-right-show .news {
+    padding: 0 13px;
+    height: 125px;
+    border-bottom: 1px solid #E4E4E4;
+    text-align: left;
+}
+.lesson-right-show .news h3 {
+    margin-top: 10px;
+    color: #333;
+    font-size: 14px;
+}
+.lesson-right-show .news .list {
+    margin-top: 5px;
+}
+.lesson-right-show .news .list .item:first-child a{
+	color: red;
+}
+.lesson-right-show .news .list .item a:hover{
+	color: #35b558;
+}
+.lesson-right-show .news .list .item:first-child a:hover{
+	color: red;
+}
+.lesson-right-show .news .list .item a {
+    display: block;
+    color: #666;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.8;
+}
+.lesson-right-show .userinfo {
+    height: 86px;
+    border-bottom: 1px solid #E4E4E4;
+    overflow: hidden;
+}
+.lesson-right-show .userinfo .head-box {
+    float: left;
+    width: 64px;
+    margin-top: 10px;
+}
+.lesson-right-show .userinfo .head-box img {
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+}
+.lesson-right-show .userinfo .name-wrap {
+    float: left;
+    width: 140px;
+}
+.lesson-right-show .userinfo .name-wrap .hello-word {
+    margin-top: 10px;
+    text-align: left;
+}
+.lesson-right-show .userinfo .name-wrap .hello-word .word {
+    font-size: 12px;
+    color: #666;
+}
+.lesson-right-show .userinfo .name-wrap .hello-word .sentence {
+    font-size: 12px;
+    color: #333;
+    margin-top: 2px;
+}
+.lesson-right-show .userinfo .name-wrap .operate {
+    margin-top: 7px;
+}
+.lesson-right-show .userinfo .name-wrap .operate .login-btn, .lesson-right-show .userinfo .name-wrap .operate .register-btn {
+    display: block;
+    float: left;
+    width: 48px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #FFF;
+    text-align: center;
+}
+.lesson-right-show .userinfo .name-wrap .operate .login-btn {
+    margin-right: 10px;
+    background: #FB5D20;
+}
+.lesson-right-show .userinfo .name-wrap .operate .register-btn {
+    background: #35b558;
+}
+.lesson-right-show .recommend .start-list li {
+    float: left;
+    display: block;
+    color: #000;
+    width: 52px;
+    height: 76px;
+    font-size: 12px;
+    line-height: 23px;
+    text-align: center;
+    border-bottom: 1px solid #F5F5F5;
+    border-right: 1px solid #F5F5F5;
+}
+.lesson-right-show .recommend .start-list li .icon {
+    background-image: url(http://s1.jikexueyuan.com/index/images/recommend_4a9a464.png);
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 13px auto 0;
+    background-size: 71px 232px;
+}
+.lesson-right-show .recommend .start-list li .icon.question {
+    background-position: -5px -3px;
+}
+.lesson-right-show .recommend .start-list li .angle-bottom {
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 6px solid #E4E4E4;
+    box-sizing: content-box;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    margin: 0 auto;
+}
+.lesson-right-show .recommend .start-list li .icon.wiki {
+    background-position: -5px -31px;
+}
+.lesson-right-show .recommend .start-list li .icon.lession {
+    background-position: -5px -59px;
+}
+.lesson-right-show .recommend .start-list li .icon.group {
+    background-position: -5px -87px;
+}
+.lesson-right-show .recommend .start-list li a {
+    display: block;
+    color: #000;
+    width: 52px;
+    height: 76px;
+    overflow: hidden;
+}
+.lesson-right-show .recommend .start-list li a:hover {
+    color: #35b558;
+}
+.lesson-right-show .recommend .start-list li a:hover .icon.download{
+	background-position: -40px -117px;
+}
+.lesson-right-show .recommend .start-list li a:hover .icon.known{
+	background-position: -40px -144px;
+}
+.lesson-right-show .recommend .start-list li a:hover .icon.occupation{
+	background-position: -40px -173px;
+}
+.lesson-right-show .recommend .start-list li a:hover .icon.vip{
+	background-position: -40px -202px;
+}
+.lesson-right-show .recommend .start-list li .icon.download {
+    background-position: -5px -117px;
+}
+.lesson-right-show .recommend .start-list li .icon.known {
+    background-position: -5px -144px;
+}
+.lesson-right-show .recommend .start-list li .icon.occupation {
+    background-position: -5px -173px;
+}
+.lesson-right-show .recommend .start-list li .icon.vip {
+    background-position: -5px -202px;
+}
+
+.lesson-right-show .recommend .move-list{
+	width: 208px;
+	display: none;
+}
+.active {
+    border-bottom: 0 !important;
+    background: #FFF !important;
+    color: #35b558;
+}
+.lesson-right-show .recommend .move-list .listDiv{
+	height: 24px;
+}
+.lesson-right-show .recommend .move-list .type-list li {
+    float: left;
+    width: 52px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 12px;
+    background: #FCFCFC;
+    border-bottom: 1px solid #F5F5F5;
+    border-right: 1px solid #F5F5F5;
+    cursor: pointer;
+}
+.lesson-right-show .recommend .move-list .content {
+    position: relative;
+    height: 125px;
+}
+.lesson-right-show .recommend .move-list .content .question {
+    padding: 10px;
+}
+.lesson-right-show .recommend .move-list .content .tab-content {
+    display: none;
+}
+.lesson-right-show .recommend .move-list .content .question li a {
+    display: block;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 20px;
+    text-align: left;
+}
+.lesson-right-show .recommend .move-list .content .question li a:hover{
+	color: #35b558;
+}
+.lesson-right-show .recommend .move-list .content .question li a img {
+    display: inline;
+    width: 16px;
+    height: 16px;
+}
+.lesson-right-show .recommend .move-list .content .question li a .title {
+    margin-left: 4px;
+    font-size: 12px;
+}
+.lesson-right-show .recommend .move-list .content .wiki {
+    margin: 15px 10px;
+}
+.lesson-right-show .recommend .move-list .content .wiki li{
+	float: left;
+	width:55px;
+	font-size: 12px;
+	margin-right:7px;
+}
+.lesson-right-show .recommend .move-list .content .wiki li a {
+	color: #666;
+}
+.lesson-right-show .recommend .move-list .content .wiki li img{
+	width: 55px;
+	height:73px;
+	display:block;
+}
+.lesson-right-show .recommend .move-list .content .wiki li .title{
+	display: block;
+	margin-top:8px;
+	text-align:center;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.lesson-right-show .recommend .move-list .content .lession li{
+	float: left;
+}
+.lesson-right-show .recommend .move-list .content .lession li a{
+	width:104px;
+	height: 64px;
+	border-bottom:1px solid #f5f5f5;
+	border-right: 1px solid #f5f5f5;
+	display:block;
+	color:#666;
+	overflow:hidden;
+}
+.lesson-right-show .recommend .move-list .content .lession li img{
+	width: 30px;
+	height:30px;
+	display: block;
+	margin:7px auto;
+}
+.lesson-right-show .recommend .move-list .content .lession li .title {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.lesson-right-show .recommend .move-list .content .group {
+    margin: 10px 0;
+    font-size: 12px;
+}
+.lesson-right-show .recommend .move-list .content .group li {
+    height: 54px;
+    border-bottom: 1px solid #F5F5F5;
+    overflow: hidden;
+    padding: 10px;
+}
+.lesson-right-show .recommend .move-list .content .group li img {
+    float: left;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+}
+.lesson-right-show .recommend .move-list .content .group li .info {
+    float: left;
+    width: 95px;
+    text-align: left;
+}
+.lesson-right-show .recommend .move-list .content .group li .info .title {
+    color: #333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.lesson-right-show .recommend .move-list .content .group li .info .count {
+    color: #666;
+}
+.lesson-right-show .recommend .move-list .content .group li .join {
+    float: left;
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 3px;
+    color: #FFF;
+    background: #ff5c00;
+    text-align: center;
+    margin-top: 5px;
+}
+.lesson-right-show .recommend .move-list .content .group li:last-child {
+    border-bottom: 0;
+}
+/*热门推荐课程*/
+.hot-lesson{
+	width: 100%;
+    height: 552px;
+}
+.hot-lessonbox-class{
+    margin-top: 20px;
+}
+#hot-lessonbox .lesson-list{
+    width: 100%;
+    display: block;
+}
+#hot-lessonbox .lesson-list-hidden{
+    display: none;
+}
+.hot-lesson ul {
+    height: 41px;
+    background: url(http://s1.jikexueyuan.com/index/images/hotnav_bc_f22b37e.jpg) 0 100% repeat-x;
+}
+/*推荐课程菜单*/
+.hot-lesson ul li {
+    width: 16.6%;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.hot-lesson ul li.on {
+    border-bottom: 2px solid #35b558;
+    background: url(http://s1.jikexueyuan.com/index/images/index-sj_cc73747.png) center bottom no-repeat;
+    background-size: 10px 4px;
+    color: #35b558;
+}
+/*推荐课程*/
+#hot-lessonbox .lesson-list ul {
+    width: 1100px;
+    margin-top: 0;
+    background: 0;
+}
+#hot-lessonbox .lesson-list ul li {
+    margin-right: 20px;
+    background: 0 0;
+    margin-bottom: 20px;
+    height: 220px;
+    width: 235px;
+}
+#hot-lessonbox .lesson-list ul li:hover .lessonplay{
+    display: block;
+}
+#hot-lessonbox .lesson-list .lessonimg-box {
+    border: 1px solid #e4e4e4;
+    border-bottom: 0;
+    width: 235px;
+    position: relative;
+}
+.lesson-list .lessonimg-box .lessonimg {
+    width: 100%;
+    height: 130px;
+}
+.lesson-list .lessonplay {
+    background: #000;
+    background: rgba(0,0,0,.4);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.lesson-list .lessonplay .playericon {
+    position: absolute;
+    z-index: 120;
+    width: 50px;
+    height: 50px;
+    display: block;
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -25px;
+    background: url(http://s1.jikexueyuan.com/common/images/player_icon_5c67475.png) 0 0 no-repeat;
+    cursor: pointer;
+    background-size: 50px 50px;
+}
+#hot-lessonbox .lesson-list .lesson-infor {
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+    background: #fff!important;
+    height: 88px;
+    padding: 10px;
+    position: relative;
+    z-index: 200;
+    overflow: hidden;
+}
+.lesson-list .lesson-infor .lesson-info-h2{
+    font-size: 14px;
+    color: #333;
+    line-height: 18px;
+    margin-bottom: 12px;
+    height: 36px;
+    overflow: hidden;
+    text-align:left;
+}
+.lesson-list .lesson-infor .lesson-info-h2 a, .lesson-list .lesson-infor .lesson-info-h2 a:hover{
+    color: #333;
+}
+.lesson-list .lesson-infor p {
+    color: gray;
+    font-size: 12px;
+    line-height: 18px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-bottom: 10px;
+    display: none;
+}
+.lesson-list .lesson-infor .timeandicon {
+    font-size: 12px;
+    color: gray;
+    position: relative;
+}
+.lesson-list .lesson-infor .timeandicon dl {
+    width: 120px;
+    float: left;
+    white-space: nowrap;
+}
+.lesson-list .lesson-infor .timeandicon dl dd {
+    font-size: 12px;
+}
+.mar-b8 {
+    margin-bottom: 8px;
+}
+.lesson-list .lesson-infor .timeandicon .time-icon {
+    background: url(http://s1.jikexueyuan.com/common/images/clok_a413ecf.png) 0 0 no-repeat;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+    background-size: 14px 14px;
+}
+.lesson-list .lesson-infor .zhongji {
+    display: none;
+}
+.lesson-infor .timeandicon .xinhao-icon2 {
+    background: url(http://s1.jikexueyuan.com/common/images/tow-ji_ec2b553.png) 0 0 no-repeat;
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+.lesson-list .lesson-infor .timeandicon .learn-number {
+    float: right;
+    display: none;
+}
+.lesson-list .lesson-infor .lessonicon-box {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    bottom: 4px;
+}
+.lesson-list .lesson-infor .lessonicon-box a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+}
+.lesson-list .lesson-infor .lessonicon-box a img {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+/*职业路径图*/
+.learnbox{
+    width: 100%;
+}
+.index-public-title {
+    margin-bottom: 16px;
+}
+/*标题*/
+.index-public-title strong {
+    font-size: 18px;
+    color: #333;
+    float: left;
+    font-weight: 500;
+}
+.index-public-title strong a {
+    color: #333;
+}
+.index-public-title .way {
+    font-size: 12px;
+    line-height: 13px;
+    color: #fff;
+    background: #999;
+    text-align: center;
+    border-radius: 50%;
+    display: block;
+    width: 13px;
+    height: 13px;
+    float: left;
+    margin: 5px 8px 0;
+    cursor: pointer;
+}
+/*标题提示*/
+.index-public-title .way-infor {
+    font-size: 12px;
+    color: #666;
+    padding: 2px 4px;
+    border: 1px solid #e4e4e4;
+    position: relative;
+    display: inline-block;
+    box-shadow: 1px 1px 3px #ccc;
+    opacity: 0;
+    margin-left: -5px;
+    float: left;
+    transition: opacity 0.6s ease-in,margin-left 0.6s ease-in;
+}
+.index-public-title .way-infor i {
+    background: url(http://s1.jikexueyuan.com/index/images/title-sj_adebc06.jpg) center center no-repeat;
+    width: 5px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    left: -5px;
+    top: 5px;
+    z-index: 10;
+}
+/*提示显示*/
+.index-public-title .way:hover ~ .way-infor{
+    opacity: 1;
+    margin-left: 0px;
+}
+/*更多职业课程*/
+.index-public-title .more-lesson {
+    font-size: 12px;
+    color: #2d85ca;
+    float: right;
+    margin-top: 4px;
+}
+/*职业课程列表*/
+.learn-card a {
+    width: 20%;
+    border: 1px solid #E4E4E4;
+    float: left;
+    text-align: center;
+    display: block;
+    height: 300px;
+    border-right: 0;
+    overflow: hidden;
+}
+.learn-card a img{
+    width: 100%;
+    height: 120px;
+    margin-bottom: 24px;
+}
+.learn-card a h2 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 20px;
+    height: 18px;
+    overflow: hidden;
+}
+.learn-card a p {
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+    height: 20px;
+    width: 199px;
+    overflow: hidden;
+}
+.greenbtn2 {
+    display: inline-block;
+    color: #35b558;
+    font-size: 16px;
+    background: #f3fff6;
+    border: 1px solid #35b558;
+    -webkit-transition-duration: .8s;
+    transition-duration: .8s;
+    -webkit-transition-property: background;
+    transition-property: background;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.learn-card a .greenbtn2 {
+    width: 140px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    outline: 0;
+}
+.learn-card a #Waiting-btn {
+    background: #f5f5f5;
+    color: gray;
+    border: 1px solid #e4e4e4;
+    outline: 0;
+    width: 140px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.learn-card a:first-child,.learn-card a:nth-child(2),.learn-card a:nth-child(3),.learn-card a:nth-child(4){
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-style: solid none solid solid;
+    border-top-color: rgb(228, 228, 228);
+    border-bottom-color: rgb(228, 228, 228);
+    border-left-color: rgb(228, 228, 228);
+    margin-top: 0px;
+}
+/*web前段浮动-hover样式*/
+.learn-card a:first-child:hover{
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #35b558;
+    margin-top: 0px;
+}
+.learn-card a:first-child:hover ~ a:nth-child(2){
+    border-left: 1px solid #35b558;
+}
+/*Android工程师-hover样式*/
+.learn-card a:nth-child(2):hover{
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #35b558;
+    margin-top: 0px;
+}
+.learn-card a:nth-child(2):hover ~ a:nth-child(3){
+    border-left: 1px solid #35b558;
+}
+/*ios-hover样式*/
+.learn-card a:nth-child(3):hover{
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #35b558;
+    margin-top: 0px;
+}
+.learn-card a:nth-child(3):hover ~ a:nth-child(4){
+    border-left: 1px solid #35b558;
+}
+/*javaWeb-hover样式*/
+.learn-card a:nth-child(4):hover{
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #35b558;
+    margin-top: 0px;
+}
+.learn-card a:nth-child(4):hover ~ a:nth-child(5){
+    border-left: 1px solid #35b558;
+}
+/*php-hover样式*/
+.learn-card a:nth-child(5):hover{
+    border: 1px solid #35b558;
+    margin-top: 0px;
+}
+.learn-card a:nth-child(5){
+    border-right: 1px solid #E4E4E4;
+    border: 1px solid rgb(228, 228, 228);
+    margin-top: 0px;
+}
+.learn-card a:nth-child(6),.learn-card a:nth-child(7),.learn-card a:nth-child(8),.learn-card a:nth-child(9),.learn-card a:nth-child(10){
+    border-top-width: 0px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-bottom-color: rgb(228, 228, 228);
+    border-left-color: rgb(228, 228, 228);
+    margin-top: 0px;
+}
+.learn-card a:last-child {
+    border-right: 1px solid #E4E4E4;
+}
+/*cocos2d-hover样式*/
+.learn-card a:nth-child(6):hover{
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #35b558;
+    margin-top: -1px;
+}
+.learn-card a:nth-child(6):hover ~ a:nth-child(7){
+    border-left: 1px solid #35b558;
+}
+/*unity3d-hover样式*/
+.learn-card a:nth-child(7):hover{
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #35b558;
+    margin-top: -1px;
+}
+.learn-card a:nth-child(7):hover ~ a:nth-child(8){
+    border-left: 1px solid #35b558;
+}
+/*asp.net-hover样式*/
+.learn-card a:nth-child(8):hover{
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #35b558;
+    margin-top: -1px;
+}
+.learn-card a:nth-child(8):hover ~ a:nth-child(9){
+    border-left: 1px solid #35b558;
+}
+/*大数据-hover样式*/
+.learn-card a:nth-child(9):hover{
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #35b558;
+    margin-top: -1px;
+}
+.learn-card a:nth-child(9):hover ~ a:nth-child(10){
+    border-left: 1px solid #35b558;
+}
+/*运维-hover样式*/
+.learn-card a:last-child:hover{
+    border: 1px solid #35b558;
+    margin-top: -1px;
+}
+.learn-card a:hover .greenbtn2{
+    background: #35b558;
+    color: #fff;
+    outline: 0;
+}
+.learn-card a:hover #Waiting-btn {
+    background: #ddd;
+    outline: 0;
+}
+/*知识体系图*/
+.mapbox {
+    border-bottom: 1px solid #E4E4E4;
+    border-right: 1px solid #E4E4E4;
+    width: 1000px;
+    height: 481px;
+    overflow: hidden;
+}
+.mapbox .mapbox-1200 {
+    width: 1050px;
+}
+.card-transform {
+    width: 167px;
+    height: 120px;
+    border: 1px solid #E4E4E4;
+    border-right: 0;
+    border-bottom: 0;
+    float: left;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.card-transform .back, .card-transform .front {
+    border-bottom: 1px solid #E4E4E4;
+    width: 167px;
+    height: 120px;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -moz-backface-visibility: hidden;
+    -moz-transition: 1s;
+    -ms-backface-visibility: hidden;
+    -ms-transition: 1s;
+    backface-visibility: hidden;
+    transition: 1s;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.card-transform .front {
+    border-bottom: 1px solid #E4E4E4;
+    padding: 15px 0;
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    background-color: #fff;
+}
+.card-transform .front img {
+    margin-bottom: 5px;
+    height: 40px;
+    width: 40px;
+}
+.card-transform .front h2 {
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #333;
+}
+.card-transform .front span {
+    font-size: 14px;
+    color: #35b558;
+}
+.card-transform .back {
+    padding-top: 30px;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    background-color: #f5f5f5;
+}
+.card-transform .back strong {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.card-transform .back .greenbtn {
+    font-size: 16px;
+    background: #35b558;
+    border: 1px solid #35b558;
+    color: #fff;
+    text-align: center;
+    border-radius: inherit;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    width: 140px;
+    height: 36px;
+    cursor: pointer;
+}
+.card-transform .back .greenbtn:active, .card-transform .back .greenbtn:focus,.card-transform .back .greenbtn:hover {
+    background: #66d178;
+    color: #fff;
+}
+.card-transform:hover .front{
+    z-index: 0;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+.card-transform:hover .back{
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+/*精品系列课程*/
+.lesson-card *{
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+.f_l {
+    float: left;
+}
+.lesson-card {
+    position: relative;
+    width: 235px;
+    height: 261px;
+    padding: 16px;
+    border: 1px solid #e4e4e4;
+    font-size: 12px;
+    -webkit-transition: border-color .3s;
+    -moz-transition: border-color .3s;
+    transition: border-color .3s;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+.lesson-card a {
+    color: #666;
+}
+.lesson-card:nth-child(4n+1) {
+    margin-left: 0;
+}
+.lesson-card:hover {
+    border-color: #35b558;
+}
+.lesson-card:hover .describe {
+    visibility: visible;
+    opacity: 1;
+}
+.lesson-card h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: left;
+}
+.lesson-card .images {
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.lesson-card .images img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.lesson-card .other {
+    position: relative;
+    z-index: 20;
+    color: gray;
+    line-height: 18px;
+}
+.lesson-card .other span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    margin-right: 6px;
+}
+.lesson-card .other .lesson-count {
+    max-width: 40px;
+}
+.lesson-card .other .learn-count {
+    max-width: 90px;
+}
+.collect {
+    overflow: hidden;
+    width: 56px;
+    height: 20px;
+}
+.lesson-card .collect {
+    float: right;
+}
+
+.lesson-card .btn {
+    height: 26px;
+    padding: 0 15px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: background-color .8s,border-color .8s;
+    -moz-transition: background-color .8s,border-color .8s;
+    transition: background-color .8s,border-color .8s;
+    background: #eaeaea;
+    border-color: #eaeaea;
+    color: #666;
+    display: inline-block;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.lesson-card .btn-def {
+    background: #35b558;
+    border-color: #35b558;
+    color: #fff;
+}
+.collect .btn {
+    display: block;
+    width: 100%;
+    height: 20px;
+    padding: 0;
+    line-height: 18px;
+}
+.lesson-card .greenbtn {
+    display: inline-block;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 12px;
+    background: #35b558;
+    -webkit-transition-duration: .8s;
+    transition-duration: .8s;
+    -webkit-transition-property: background;
+    transition-property: background;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.lesson-card .other span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    margin-right: 6px;
+}
+.lesson-card .describe {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background: rgba(255,255,255,.9);
+    opacity: 0;
+    top: 0;
+    height: 100%;
+    text-align: center;
+    visibility: hidden;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s;
+}
+.lesson-card .describe .picture {
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.lesson-card .describe .picture img {
+    width: 100%;
+    height: 100%;
+}
+.lesson-card .describe .name {
+    position: absolute;
+    top: 74px;
+    left: 0;
+    width: 100%;
+}
+.lesson-card .describe .text {
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    text-align: left;
+    line-height: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.lesson-card .describe .btn {
+    position: absolute;
+    top: 164px;
+    left: 50%;
+    width: 100px;
+    height: 28px;
+    margin-left: -50px;
+    font-size: 14px;
+    line-height: 26px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.lesson-card .describe a:hover {
+    color: #35b558;
+}
+.lesson-card .greenbtn:active, .lesson-card .greenbtn:focus, .lesson-card .greenbtn:hover {
+    background: #66d178;
+    color: #fff !important;
+}
+/*WIKI*/
+.wikibox .one-wiki {
+    width: 333.3px;
+    height: 370px;
+    float: left;
+    padding: 15px;
+    border: 1px solid #e4e4e4;
+    border: 1px solid rgb(228, 228, 228);
+}
+.wikibox .one-wiki:hover {
+    border: 1px solid #35b558;
+}
+.wikibox .one-wiki h2 {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+}
+.wikibox .one-wiki dl dd {
+    text-align: center;
+    width: 142px;
+    float: left;
+}
+.wikibox .one-wiki dl dd:nth-child(1) {
+    margin-right: 15px;
+}
+.wikibox .one-wiki dl dd .imgbox {
+    position: relative;
+    width: 142px;
+    height: 200px;
+    background: #999;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+}
+.wikibox .one-wiki dl dd .imgbox:hover .fengmian{
+    width: 133.44px;
+    position: absolute;
+    left: 0;
+}
+.wikibox .one-wiki dl dd .imgbox:hover .look{
+    display: block;
+}
+.wikibox .one-wiki dl dd .imgbox .look {
+    position: absolute;
+    width: 40px;
+    z-index: 10;
+    right: -10px;
+    top: -13px;
+    background: url(http://s1.jikexueyuan.com/index/images/look_d293d44.png) center center no-repeat;
+    background-size: 100% 100%;
+    height: 20px;
+    display: none;
+}
+/*翻阅*/
+.wikibox .one-wiki dl dd .imgbox .fengmian {
+    position: absolute;
+    left: 0;
+    width: 142px;
+    height: 200px;
+    border-radius: 5px;
+    transition: width 1s ease;
+}
+.wikibox .one-wiki dl dd h3 {
+    font-size: 13px;
+    color: #333;
+    height: 13px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 13px;
+    margin: 10px auto;
+}
+.wikibox .one-wiki dl dd a{
+    color: #333;
+}
+.wikibox .one-wiki dl dd span {
+    font-size: 12px;
+    color: #999;
+    display: block;
+}
+.wikibox .one-wiki dl dd a:hover h3, .wikibox .one-wiki dl dd a:hover span{
+    color: #35b558;
+}
+.wikibox .one-wiki ul {
+    margin-top: 10px;
+}
+.wikibox .one-wiki ul li {
+    font-size: 12px;
+    color: #999;
+    line-height: 12px;
+    margin-bottom: 8px;
+    display: block;
+}
+.wikibox .one-wiki ul li a {
+    color: #999;
+}
+.wikibox .one-wiki ul li a:hover {
+    color: #35b558;
+}
+.wikibox .one-wiki ul li p {
+    width: 200px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+}
+.wikibox .one-wiki ul li span {
+    text-align: right;
+    display: block;
+    float: right;
+    width: 90px;
+}
+/*战略合作企业*/
+.strategy {
+    border: 1px solid #E4E4E4;
+    height: 90px;
+    padding: 20px;
+    position: relative;
+}
+.strategy:hover #banner-left3,.strategy:hover #banner-right3{
+    opacity: 1;
+}
+ #banner-left3 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 800;
+    opacity:0;
+    cursor: pointer;
+    transition: opacity 1s ease;
+}
+#banner-right3 {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 800;
+    cursor: pointer;
+    opacity:0;
+    transition: opacity 0.5s ease;
+}
+.swiper-strategy {
+    height: 50px!important;
+}
+.swiper-container {
+    height: 305px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.swiper-wrapper {
+    position: relative;
+    width: 5269px;
+    height: 50px;
+}
+.swiper-strategy .swiper-wrapper a {
+    float: left;
+}
+.swiper-strategy .swiper-slide img {
+    height: 50px;
+    width: 150px;
+    border: 1px solid #e4e4e4;
+    margin: 0 5px;
+}
+/*媒体报道*/
+.strategy2 {
+    height: 90px;
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(228, 228, 228);
+    border-image: initial;
+    padding: 20px;
+}
+#banner-left4 {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 800;
+    cursor: pointer;
+    opacity:0;
+    transition: opacity 1s ease;
+}
+#banner-right4 {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 800;
+    cursor: pointer;
+    opacity:0;
+    transition: opacity 1s ease;
+}
+.strategy2:hover #banner-left4,.strategy2:hover #banner-right4{
+    opacity: 1;
+}
+/*尾部*/
+footer{
+    min-width: 1000px;
+    margin-top: 50px;
+}
+footer .jkinfor-block {
+    background: rgb(250, 250, 250);
+    border-top: 1px solid rgb(228, 228, 228);
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+footer .copyright {
+    width: 1000px;
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+    width: 1000px;
+    text-align: center;
+    margin: 0px auto;
+    padding: 20px;
+}
+footer .jkinfor-block .jkinfor {
+    width: 1000px;
+    min-height: 200px;
+    margin: 0px auto;
+}
+footer .jkinfor dl {
+    width: 185px;
+    padding-left: 30px;
+    color: grey;
+    float: left;
+    min-height: 175px;
+    margin: 25px 0px;
+    border-left: 1px solid rgb(228, 228, 228);
+}
+footer .jkinfor dl dt {
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    font-weight: 500;
+}
+footer .jkinfor dl dd {
+    font-size: 12px;
+    margin-top: 10px;
+}
+footer .jkinfor a {
+    color: grey;
+    padding-left: 5px;
+}
+footer .jkinfor a:hover {
+    color: rgb(53, 181, 88);
+}
+footer .search-share {
+    width: 260px;
+    float: left;
+    min-height: 226px;
+    border-left: 1px solid rgb(228, 228, 228);
+    padding: 20px 0px 0px 40px;
+}
+footer .search-share .jktxt {
+    font-size: 15px;
+    color: rgb(53, 181, 88);
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+footer .search-share .app-download a {
+    padding-left: 0px;
+}
+footer .search-share .app-download a img{
+    width: 21px;
+    display: block;
+    float: left;
+    margin-right: 15px;
+}
+footer .search-share .app-download p {
+    font-size: 14px;
+    color: grey;
+    background: url(http://s1.jikexueyuan.com/common/images/more-icon_d39346f.png) 160px center / 7px 13px no-repeat;
+}
+footer .search-share .share {
+    margin-top: 15px;
+    height: 32px;
+}
+footer .search-share .share a {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    background: url(http://s1.jikexueyuan.com/common/images/icon_7f8b929.png) -23px 0px no-repeat;
+}
+footer .search-share .app-download div:hover p{
+   color: rgb(53, 181, 88);
+}
+footer .search-share .share a.sina-icon {
+    background-position: -23px 0px;
+}
+footer .search-share .share a.qq-icon {
+    background-position: -23px -82px;
+}
+ footer .search-share .share a.qq-icon .weinxinpop{
+    position: absolute;
+    top: -159px;
+    left: -44px;
+    display: none;
+}
+footer .search-share .share a.qq-icon:hover {
+    background-position: -23px -122px;
+}
+ footer .search-share .share a.qq-icon:hover .weinxinpop{
+    display: block;
+ }
+ footer .search-share .share a.tieba-icon:hover {
+    background-position: -145px -40px;
+}
+footer .search-share .share a.sina-icon:hover {
+    background-position: -23px -40px;
+}
+footer .kefu-online {
+    margin-top: 15px;
+    padding-left: 35px;
+}
+footer .kefu-online a {
+    display: block;
+    padding: 0px;
+}
+footer .kefu-online .kefu-icon.online {
+    background-position: 0px 0px;
+}
+footer .kefu-online .kefu-icon {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: -40px;
+    background: url(http://s1.jikexueyuan.com/common/images/kefu_8edc734.png) -40px 0px / 80px 40px no-repeat;
+}
+footer .kefu-online h5 {
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+    margin-bottom: 2px;
+    line-height: 22px;
+    padding-left: 5px;
+}
+footer .kefu-online .apply:hover p{
+    color: rgb(53, 181, 88);
+}
+footer .kefu-online .apply:hover h5{
+    color: rgb(53, 181, 88);
+}
+footer .kefu-online p {
+    color: grey;
+    font-size: 12px;
+    padding-left: 5px;
+}
+footer .copyright strong {
+    font-weight: 400;
+}
+footer .copyright a {
+    color: rgb(153, 153, 153);
+}

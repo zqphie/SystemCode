@@ -1,0 +1,19 @@
+/*
+*初始化运行
+*/
+$(function(){
+	load.init();
+})
+var load={
+	init:function(){
+		this.baiduSetting();
+	},
+	/*侧边栏下拉菜单显示与隐藏*/
+	baiduSetting:function(){
+		$('#more,#more-product').mouseover(function(){
+			$('#more-product').show();
+		}).mouseout(function(){
+			$('#more-product').hide();
+		})
+	}
+}

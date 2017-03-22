@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>新教员注册第一步-青岛家教网</title>
+	<!-- 引入外部样式表 -->
+	<link rel="stylesheet" type="text/css" href="style/index.css">
+	<link rel="shortcut icon" href="image/favicon.ico">
+	<!-- 引入外部js -->
+	<script type="text/javascript" src="script/main.js"></script>
+</head>
+<body>
+	<center>
+		<div class="wrapper">
+			<!-- 页面头部链接区域 -->
+			<table class="table-top">
+				<tr>
+					<td class="table-top-left">
+						<a href="http://www.qdjj.net">
+							<img src="image/qdjjlogo.gif">
+						</a>
+					</td>
+					<td  class="table-top-right">
+						<a href="#">注册</a>
+						<a href="http://www.qdjj.net/login.asp">登录</a>
+						<a href="javascript:window.external.addFavorite('http://www.qdjj.net','青岛家教网')">收藏本站</a>
+					</td>
+				</tr>
+			</table>
+			<!-- 中部表单输入区域 -->
+			<form name="form1" action="registeredPage/register.html" method="post" onsubmit="return checkform();">
+				<table class="table-center">
+					<tbody>
+						<tr>
+							<td class="table-center-title" colspan="3">新教员注册第一步选择用户名、密码和身份</td>
+						</tr>
+						<tr>
+							<td class="table-center-tag" colspan="3">
+								<span>
+									注意：带 <font class="input-label-font">*</font>
+									为必填项
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="name-pwd-title">
+								<p> <strong>登录名和密码</strong>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="input-label"> <font class="input-label-font">*</font>
+								<label for="username">会员名：</label>
+							</td>
+							<td class="name-input">
+								<input name="username" type="text" id="username" value="admin" maxlength="12"></td>
+							<td class="input-tag" id="tbUserName">
+								<font class="input-tag-font">3-12个字符</font>
+								<span>，会员名须以字母开头，只能由英文字母、数字、下划线组成，中间不能有空格。</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="input-label">
+								<font class="input-label-font">*</font>
+								<label for="password">密码：</label>
+							</td>
+							<td>
+								<input name="password" type="password" id="password" value="123456" maxlength="20"></td>
+							<td class="input-tag">
+								<font class="input-tag-font">6-20个字符</font>
+								<span>，区分英文字母大小写。</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="input-label">
+								<font class="input-label-font">*</font>
+								<label for="repassword">确认密码：</label>
+							</td>
+							<td>
+								<input name="repassword" type="password" id="repassword" value="123456" maxlength="20">
+							</td>
+							<td class="input-tag">
+								<span>确认密码要与密码完全一致，注意英文字母大小写。</span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="name-pwd-title">
+								<p> <strong>选择教员身份</strong>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="input-label">
+								<font  class="input-label-font">*</font>
+								<label for="faculty-radio">教员身份：</label>
+							</td>
+							<td colspan="2" class="input-radio">
+								<input type="radio"  name="RadioGroup" id="flag" value="1">	
+								在校大学生(研究生) ,不含留学生
+								<br>			
+								<input type="radio" name="RadioGroup" id="flag" value="2">
+								专职教师(在职/进修/离职/退休)
+								<br>			
+								<input checked="true" type="radio" name="RadioGroup" id="flag" value="3">
+								外籍人士(含留学生、外教)，海外归国人员
+								<br>			
+								<input type="radio" name="RadioGroup" id="flag" value="4">
+								社会职业人士(已经毕业离校的非教师职业人员)
+							</td>
+						</tr>
+						<tr>
+							<td class="submit-style" colspan="3">
+								<input name="button" type="submit" value="提交">			
+								<input type="reset" name="button" id="button" value="重置">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+			<!-- 底部 -->
+			<div class="wrapper-bottom">
+				<span><font>Copyright &copy; 2003～2008</font>
+					版权所有 青岛家教网</span>
+			</div>
+		</div>
+	</center>
+</body>
+</html>

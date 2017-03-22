@@ -1,0 +1,124 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*设置body背景、全局字体样式*/
+body{
+	font-size:12px;
+	background-image: url(http://www.qdjj.net/images/beijing.gif);
+}
+/*注册主体样式*/
+.wrapper{
+	margin-top: 10px;
+	width: 710px;
+	height: 520px;
+	background-color: #FFFFFF;
+	border-radius: 30px;
+}
+/*头部导航table样式*/
+.table-top{
+	margin-bottom: 5px;
+	width:650px;
+	height: 82px;
+	background:0;
+}
+/*头部导航table左边图片样式*/
+.table-top-left img{
+	width: 180px;
+	height: 76px;
+}
+/*头部导航table右侧a标签样式*/
+.table-top-right{
+	text-align: right;
+	vertical-align: bottom;
+}
+.table-top-right a{
+	color: #FF0099;
+	text-decoration: none;
+}
+/*中间内容部分样式*/
+.table-center{
+	margin: 0 auto;
+	width:620px;
+	border:solid 1px #999;
+	background:0;
+	border-collapse: collapse;
+}
+/*中间注册输入区域的标题*/
+.table-center-title{
+	text-align: center;
+	font-size:18px;
+	color: #333333;
+    font-weight: bold;
+    line-height: 42px;
+    border-bottom: solid 1px #999;
+}
+/*中间table提示*/
+.table-center-tag{
+	padding-top: 12px;
+	height: 22px;
+	color: #333333;
+}
+/*中间table提示文字样式*/
+.table-center-tag span{
+	margin-left: 15px;
+}
+/*用户名密码标题样式*/
+.name-pwd-title p{
+	background-color: #EEEEEE;
+	line-height: 26px;
+	margin: 0 15px 5px 15px;
+}
+.name-pwd-title strong{
+	margin: 0 15px;
+}
+/*用户名样式*/
+.input-label{
+	line-height: 28px;
+	width: 17%;
+	text-align: right;
+}
+/*必填项‘*’的样式*/
+.input-label-font{
+	color: #FF0000;
+}
+/*重点提示*/
+.input-tag-font{
+	color: #FF6600;
+}
+.name-input{
+	width: 31%;
+}
+.name-tag{
+	width:52%;
+}
+.input-tag span{
+	color: #888888;
+}
+/*用户名样式 结束*/
+/*选择教员 radio*/
+.input-radio{
+	line-height: 22px;
+}
+/*提交、重置按钮*/
+.submit-style{
+	height: 40px;
+	padding-top:10px;
+	text-align: center;
+	padding-bottom: 20px;
+	vertical-align: bottom;
+}
+.submit-style input{
+	width: 66px;
+	height: 22px;
+}
+/*底部*/
+.wrapper-bottom{
+	width: 540px;
+	text-align: center;
+	margin-top: 10px;
+}
+.wrapper-bottom font{
+	color: #666666;
+}
+

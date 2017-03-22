@@ -1,0 +1,42 @@
+article{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	line-height:26px; 
+	font-size:14px;
+}
+/*头部标题*/
+header .title{
+	text-align: center;
+	padding: 20px 0px 10px;
+	background: url(./image/stripes.png) bottom left repeat-x;
+}
+/*标题*/
+header h1{
+	font-size: 18px;
+	color: #1d9fd3;
+	font-family: '微软雅黑';
+	font-weight: 600;
+}	
+/*内容*/
+.content{
+	margin-top: 20px;
+	-moz-column-width:500px;
+	-webkit-column-width:500px;
+	-o-column-width:500px;
+	-ms-column-width:500px;
+	column-width:500px;
+}
+/*具体内容*/
+.content p{
+	color:#444; 
+	margin:0 0 5px; 
+	text-indent:20px;
+}
+/*内容小标题*/
+.content p strong {
+	font-weight: bold;
+	color: #238f23;
+}

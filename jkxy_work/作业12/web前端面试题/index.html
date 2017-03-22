@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>高级前端开发工程师面试题</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>高级前端开发工程师面试题</h1>
+            <nav id="tab">
+                <a class="on" href="#">HTML</a>
+                <a href="#">CSS</a>
+                <a href="#">Javascript</a>
+                <a href="#">部分笔试题</a>
+            </nav>
+        </header>
+        <section>
+            <div class="html item"  style="display:block">
+                <div>
+                    <h3>1.对WEB标准以及W3C的理解与认识</h3>
+                    <p>标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外 链css和js脚本、结构行为表现的分离、文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件，容易维 护、改版方便，不需要变动页面内容、提供打印版本而不需要复制内容、提高网站易用性；</p>
+                </div>
+                <div>
+                    <h3>2.doctype（文档类型）的作用是什么?</h3>
+                    <p>位于html标签最前面，告诉浏览器以那种html和xhtml规范。分为标准模式和怪异模式、基于框架的HTML模式。假如浏览器不以doctype标准模式编写DTD，页面除了无法通过代码检验之外，还无法在浏览器中正确显示。</p>
+                    <p>a.如果需要干净的标记，免于表现层的混乱，用XHTML Strict DTD类型 </p>
+                    <p>b.Transitional DTD 可包含 W3C 所期望移入样式表的呈现属性和元素。如果用户使用了不支持层叠样式表（CSS）的浏览器以至于你不得不使用 HTML 的呈现特性时，用Transitional DTD 类型。</p>
+                    <p>c.Frameset DTD 被用于带有框架的文档。除 frameset 元素取代了 body 元素之外，Frameset DTD 等同于 Transitional DTD</p>
+                </div>
+                <div>
+                    <h3>3.浏览器标准模式和怪异模式之间的区别是什么?</h3>
+                    <p>当浏览器厂商开始创建与标准兼容的浏览器时，他们希望确保向后兼容性。为了实现这一目的，他们创建了两种呈现模式，标准和混杂模式。在标准模式中，浏览器会根据规范呈现页面；在混杂模式中。页面会以一种相对宽松的向后兼容方式显示。混杂模式常用于模拟老式浏览器的行为，以防止老站点无法工作。</p>
+                    <p>他们最大的不同是对盒模型的解析。IE盒子模型和标准W3C盒子模型：ie的width包括：padding\border。标准的width不包括：padding\border 使用 document.compatMode来判断浏览器的解析方式。</p>
+                </div>
+                <div>
+                    <h3>4.data-属性的作用是什么?</h3>
+                    <p>data-* 属性用于存储页面或应用程序的私有自定义数据。data-* 属性赋予我们在所有 HTML 元素上嵌入自定义 data 属性的能力。存储的（自定义）数据能够被页面的 JavaScript 中利用，以创建更好的用户体验（不进行 Ajax 调用或服务器端数据库查询）</p>
+                </div>
+                <div>
+                    <h3>5.请描述一下cookies，sessionStorage和localStorage的区别?</h3>
+                    <p>essionStorage和localStorage是HTML5 Web Storage API提供的，可以方便的在web请求之间保存数据。有了本地数据，就可以避免数据在浏览器和服务器间不必要地来回传递。sessionStorage、localStorage、cookie都是在浏览器端存储的数据，其中sessionStorage的概念很特别，引入了一个“浏览器窗口”的概念。sessionStorage是在同源的同窗口（或tab）中，始终存在的数据。也就是说只要这个浏览器窗口没有关闭，即使刷新页面或进入同源另一页面，数据仍然存在。关闭窗口后，sessionStorage即被销毁。同时“独立”打开的不同窗口，即使是同一页面，sessionStorage对象也是不同的cookies会发送到服务器端。其余两个不会。Microsoft指出InternetExplorer8增加cookie限制为每个域名50个，但IE7似乎也允许每个域名50个cookie。</p>
+                </div>
+                <div>
+                    <h3>6.如果网页内容需要支持多语言，你会怎么做?</h3>
+                    <p>下面这些问题需要考虑： 应用字符集的选择，选择UTF-8编码 语言书写习惯&导航结构 数据库驱动型网站
+                    </p>
+                </div>
+                <div>
+                    <h3>7.什么是渐进式渲染 (progressive rendering)？</h3>
+                    <p>你需要尽早将 HTML 字节给到浏览器。 页面可以庞大，不过，只要你在短时间内(最好少于 1 秒)呈现给用户一些内容，他们仍然觉得载入很快</p>
+                </div>
+            </div>
+            <div class="css item">
+                <div>
+                    <h3>1.清除浮动的几种方式，各自的优缺点</h3>
+                    <p>(1)父级div定义height:</p>
+                    <p>原理：父级div手动定义height,就解决了父级div无法自动获取到高度的问题。优点：简单，代码少，容易掌握。缺点：只适合高度固定的布局，要给出精确的高度，如果高度和父级div不一样时，会产生问题</p>
+                    <p>(2)结尾处加空div标签clear:both</p>
+                    <p>原理：添加一个空div,利用css提高的clear:both清除浮动，让父级div能自动获取到高度。优点：简单，代码少，浏览器支持好，不容易出现怪问题。缺点：不少初学者不理解原理；如果页面浮动布局多，就要增加很多空div，让人感觉很不爽。</p>
+                    <p>(3)父级div定义伪类：after和zoom</p>
+                    <p>原理：IE8以上和非IE浏览器才支持:after,原理和方法2优点类似，zoom可解决IE6，IE7浮动问题。优点：浏览器支持好，不容易出现怪问题。目前大型网站都有使用。缺点：代码多，不少初学者不理解原理，要两句代码结合使用，才能让主流浏览器都支持。</p>
+                    <p>4.父级div定义overflow:hidden</p>
+                    <p>原理：必须定义width或zoom:1,同时不能定义height,使用overflow:hidden时，浏览器会自动检查浮动区域的高度。优点：简单，代码少，浏览器支持好。缺点：不能和position配合使用，因为超出的尺寸的会被隐藏。</p>
+                    <p>5.父级div定义overflow:auto;</p>
+                    <p>原理：必须定义width或zoom:1;同时不能定义height,使用overflow:auto时，浏览器会自动检查浮动区域的高度。优点：简单，代码少，浏览器支持好。缺点：内部宽高超过父级div时，会出现滚动条。</p>
+                    <p>6.父级div也一起浮动</p>
+                    <p>原理：所有代码一起浮动，就变成了一个整体。优点：没有优点。缺点：会产生新的浮动问题。</p>
+                    <p>7.父级div定义display:table</p>
+                    <p>原理：将div属性变成表格。优点：没有优点。缺点：会产生新的未知问题</p>
+                    <p>8.结尾处加br标签clear:both</p>
+                    <p>原理：父级div定义zoom:1来解决IE浮动问题，结尾处加br标签clear:both。不建议使用</p>
+                </div>
+                <div>
+                    <h3>2.讨论CSS hacks，条件引用或者其他。</h3>
+                    <p>
+                        _width针对于ie6。*width,+width针对于ie6,7。 color: red\9;/*IE8以及以下版本浏览器*/（但是测试可以兼容到ie10。 *+html与*html是IE特有的标签, firefox暂不支持.而*+html又为IE7特有标签（但是测试*html兼容ie6-10。*+兼容ie7-10）。 !important 在IE中会被忽视，ie6,7,8不识别，ie9+（包括ie9）是识别的。
+                    </p>
+                </div>
+                <div>
+                    <h3>3.你用过媒体查询，或针对移动端的布局/CSS 吗？</h3>
+                    <p>设备宽度(device-width)未必是布局宽度(width)，为了让非适应性布局与手机相适应，我们跟关心视图宽度，因此需要一种方式来设定宽度，这样可以使用媒体查询检测。</p>
+                    <p>让视图的宽度和设备宽度一致</p>
+                    <pre>&lt;meta element = "viewport" content = "width=device initial-scale = 1"&gt;</pre>
+                    <p>每种布局，都应该根据目标设备指定固定宽度设计</p>
+                    <pre>@media screen and (max-width:320px){}</pre>
+                    <p>为移动设备调整网页图像。在最基本的页面，一个移动优化的网站就是其布局、内容、互动都经过调整，以适应移动环境。最常见的做法是使用css媒体查询的功能为不同大小的屏幕提供不同的风格；为较小的屏幕优化布局，可以通过针对移动设备的模块服务。 不同设备的分离设计->根据监视屏幕大小进行设计->（媒体查询，灵活排版，图像结合）
+                    </p>
+                </div>
+                <div>
+                    <h3>4.有哪些的隐藏内容的方法（如果同时还要保证屏幕阅读器可用呢？）</h3>
+                    <p>需要隐藏内容的几种可能性：</p>
+                    <p>(1)对文本的隐藏</p>
+                    <p>(2)隐藏超链接（另类黑链）</p>
+                    <p>(3)对统计代码隐藏</p>
+                    <p>(4)隐藏超出图片</p>
+                    <p>(5)css隐藏滚动条</p>
+                    <p>(6)css隐藏div层</p>
+                    <p>具体实现：</p>
+                    <p>1、css隐藏DIV及内容，完全隐藏内容与布局。display:none或者visibility:hidden （面试官也许会问到：关于display:none和visible:hidden区别） display:none和visible:hidden都能把网页上某个元素隐藏起来，但两者有区别: display:none ---不为被隐藏的对象保留其物理空间，即该对象在页面上彻底消失，通俗来说就是看不见也摸不到。 visible:hidden--- 使对象在网页上不可见，但该 对象在网页上所占的空间没有改变，通俗来说就是看不见但摸得到。
+                    </p>
+                    <p>2、通过对象盒子设置缩进样式（text-indent:-9999px）方法可以隐藏超链接文本内容 同样道理，可以用来隐藏图片上方文字。此类问题我们常见于LOGO处使用，我们想让图片作为背景，而图片上方放A链接文字内容，但html锚文本功能仍然正常也能鼠标点击使用。图片作为背景而html代码内看不到图片，但文字也存在，却是文字隐藏图片显示出，鼠标也能点击指向。
+                    </p>
+                    <p>3、overflow: hidden 隐藏溢出DIV内容或图片</p>
+                    <p>4、css隐藏滚动条 使用overflow-y:hidden;和overflow-x:hidden来隐藏或显示对应横或竖方向的滚动条。
+                    </p>
+                </div>
+                <div>
+                    <h3>5.请解释一下 * { box-sizing: border-box; } 的作用, 并且说明使用它有什么好处？</h3>
+                    <p>说到 IE 的 bug，在 IE6以前的版本中，IE对盒模型的解析出现一些问题，跟其它浏览器不同，将 border 与 padding 都包含在 width 之内。而另外一些浏览器则与它相反，是不包括border和padding的。对于IE浏览器，当我们设置 box-sizing: content-box; 时，浏览器对盒模型的解释遵从我们之前认识到的 W3C 标准，当它定义width和height时，它的宽度不包括border和padding；对于非IE浏览器，当我们设置box-sizing: border-box; 时，浏览器对盒模型的解释与 IE6之前的版本相同，当它定义width和height时，border和padding则是被包含在宽高之内的。内容的宽和高可以通过定义的“width”和 “height”减去相应方向的“padding”和“border”的宽度得到。内容的宽和高必须保证不能为负，必要时将自动增大该元素border box的尺寸以使其内容的宽或高最小为0。 使用 * { box-sizing: border-box; }能够统一IE和非IE浏览器之间的差异。</p>
+                </div>
+                <div>
+                    <h3>6.请解释一下 inline 和 inline-block，block 的区别？</h3>
+                    <p>都是display 属性规定元素应该生成的框的类型。但是block代表块级元素，元素前后都有换行符；inline是默认的样式，表示该元素被显示为内联元素，元素前后没有换行符号。也就是说，block元素通常被现实为独立的一块，会单独换一行；inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。而inline-block代表行内块元素（css2.0新增）。</p>
+                    <p><strong>display:block</strong></p>
+                    <p>(1)block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。</p>
+                    <p>(2)block元素可以设置width,height属性。块级元素即使设置了宽度,仍然是独占一行。</p>
+                    <p>(3)block元素可以设置margin和padding属性。</p>
+                    <p><strong>display:inline</strong></p>
+                    <p>(1)inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。</p>
+                    <p>(2)inline元素设置width,height属性无效。</p>
+                    <p>(3)inline元素的margin和padding属性，水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。</p>
+                    <p><strong>display:inline-block</strong></p>
+                    <p>简单来说就是将对象呈现为inline对象，但是对象的内容作为block对象呈现。之后的内联对象会被排列在同一行内。比如我们可以给一个link（a元素）inline-block属性值，使其既具有block的宽度高度特性又具有inline的同行特性。</p>
+                </div>
+                <div>
+                    <h3>7.请解释一下 relative、fixed、absolute 和 static 元素的区别</h3>
+                    <p>在用CSS+DIV进行布局的时候，一直对position的四个属性值relative,absolute,static,fixed分的不是很清楚，以致经常会出现让人很郁闷的结果。今天研究了一下，总算有所了解。在此总结一下：</p>
+                    <p>先看下各个属性值的定义：</p>
+                    <p>1、static：默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。</p>
+                    <p>2、relative：生成相对定位的元素，通过top,bottom,left,right的设置相对于其正常位置进行定位。可通过z-index进行层次分级。</p>
+                    <p>3、relative与absolute的主要区别：</p>
+                    <p>首先，是上面已经提到过的在正常流中的位置存在与否。</p>
+                    <p>其次，relative定位的层总是相对于其最近的父元素，无论其父元素是何种定位方式。红色背景层为relative定位，其直接父元素绿色背景层为默认的static定位。红色背景层的位置为相对绿色背景层top、left个20元素。而如果红色背景层定位为absolute。红色背景层依然定义top:20px；left:20px；但其相对 的元素变为定位方式为absolute或relative的黄色背景层。因此，对于absolute定位的层总是相对于其最近的定义为absolute或 relative的父层，而这个父层并不一定是其直接父层。如果其父层中都未定义absolute或relative，则其将相对body进行定位。 除top、left、right、bottom定位外，margin属性值的定义也符合上述规则。 static与定位用的比较少，也比较简单，在此不做分析。 下面对应用的较多的relative和absolute与fixed进行分析： relative定位的层总是相对于其最近的父元素，无论其父元素是何种定位方式。 absolute定位的层总是相对于其最近的定义为absolute或relative的父层，而这个父层并不一定是其直接父层。如果其父层中都未定义absolute或relative，则其将相对body进行定位， fixed：生成绝对定位的元素，相对于浏览器窗口进行定位。
+                    </p>
+                </div>
+                <div>
+                    <h3>8.为什么响应式设计(responsive design)和自适应设计（adaptive design）不同？</h3>
+                    <p><strong>自适应布局(Adaptive Layout)</strong></p>
+                    <p>自适应布局（Adaptive）的特点是分别为不同的屏幕分辨率定义布局。布局切换时页面元素发生改变，但在每个布局中，页面元素不随窗口大小的调整发生变化。就是说你看到的页面，里面元素的位置会变化而大小不会变化； 你可以把自适应布局看作是静态布局的一个系列。
+                    </p>
+                    <p><strong>流式布局(Liquid Layout)</strong></p>
+                    <p>流式布局(Liquid)的特点（也叫"Fluid") 是页面元素的宽度按照屏幕进行适配调整，主要的问题是如果屏幕尺度跨度太大，那么在相对其原始设计而言过小或过大的屏幕上不能正常显示。</p>
+                    <p><strong>响应式布局(Responsive Layout)</strong></p>
+                    <p>分别为不同的屏幕分辨率定义布局，同时，在每个布局中，应用流式布局的理念，即页面元素宽度随着窗口调整而自动适配。 可以把响应式布局看作是流式布局和自适应布局设计理念的融合。
+                    </p>
+                </div>
+                <div>
+                    <h3>9.如果设计中使用了非标准的字体，你该如何去实现？</h3>
+                    <p>(1)图片替代</p>
+                    <p>(2)好是跟产品沟通，尽量使用默认就有的字体。虽然我们可以用webfonts，但它在页面加载的时候会将整个字体包都下载下来，这对于手机端网页来说无疑是致命的。如果产品一定要用非标准字体，可用这个软件FontCreator，可以从一个字体包中将你这个页面需要的那几个字提取出来，打成一个新的字体包，这样会节省很多流量 Webfonts (字体服务例如：Google Webfonts，Typekit 等等。)</p>
+                </div>
+            </div>
+            <div class="js item">
+                <div>
+                    <h3>1.请谈谈你对this的理解(在此引用了一篇文章来很好的解释)</h3>
+                    <p><strong style="color:#009688">1.this之谜</strong></p>
+                    <p>许多时候，this关键词对我以及许多刚起步的JavaScript程序员来说，都是一个谜。它是一种很强大的特性，但是理解它需要花不少功夫。</p>
+                    <p>对有Java, PHP或者其他常见的编程语言背景的人来说，this仅仅被看成是类方法中当前对象的一个实例：不会多也不会少。多数时候，它不能在方法外被使用。正是这样一种简单的使用方法，避免了混淆</p>
+                    <p>在JavaScript中，this是当前执行函数的上下文。因为JavaScript有4种不同的函数调用方式：</p>
+                    <p>函数调用: alert('Hello World!')</p>
+                    <p>方法调用: console.log('Hello World!')</p>
+                    <p>构造函数调用: new RegExp('\\d')</p>
+                    <p>隐式调用: alert.call(undefined, 'Hello World!')</p>
+                    <p>并且每种方法都定义了自己的上下文，this会表现得跟程序员预期的不太一样。同时，strict模式也会影响函数执行时的上下文。 理解this的关键点就是要对函数调用以及它如何影响上下文有个清晰的观点。这篇文章将会着重于对函数调用的解释、函数调用如何影响this以及展示确定上下文时常见的陷阱。 在开始之前，让我们来熟悉一些术语：
+                    </p>
+                    <p><strong>函数调用</strong>指执行构成一个函数的代码（简单说就是call一个函数）例如 parseInt('15')是parseInt函数调用.</p>
+                    <p><strong>函数调用</strong>的<strong>上下文</strong>指this在函数体中的值。</p>
+                    <p>函数的<strong>作用域</strong>指的是在函数体内可以使用的变量、对象以及函数的集合。</p>
+                    <p><strong style="color:#009688">2. 函数调用</strong></p>
+                    <p>当一个表达式为函数接着一个(，一些用逗号分隔的参数以及一个）时，函数调用被执行。例如parseInt('18')。这个表达式不能是属性访问，如myObject.myFunction，因为这会变成一个方法调用。举个例子，[1,5].join(',')不是一个函数调用，而是一个方法调用。</p>
+                    <p>一个简单的函数调用例子:</p>
+                    <pre>
+function hello(name) {
+    return 'Hello ' + name + '!';
+}
+
+// Function invocation
+var message = hello('World');
+console.log(message); // => 'Hello World!'
+                    </pre>
+                    <p>hello('World')是函数调用: hello表达式等价于一个函数，跟在它后面的是一对括号以及'World'参数。</p>
+                    <p>更加高级的例子是IIFE (立即调用的函数表达式):</p>
+                    <pre>
+var message = (function(name) {
+   return 'Hello ' + name + '!';
+})('World');
+console.log(message) // => 'Hello World!'
+                    </pre>
+                    <p>IIFE也是一个函数调用: 第一对括号(function(name) {...}) 是一个等价于函数的表达式, 紧接着一对括号以及'World'参数: ('World')。</p>
+                    <p><strong style="color:#009688">2.1. 在函数调用中的this</strong></p>
+                    <p><strong>this 在函数调用中是一个全局对象</strong></p>
+                    <p>全局对象是由执行的环境决定的。在浏览器里它是window对象。 在函数调用里，函数执行的上下文是全局对象。让我们一起看看下面函数里的上下文：
+                    </p>
+                    <pre>
+function sum(a, b) {
+   console.log(this === window); // => true
+   this.myNumber = 20; // add 'myNumber' property to global object
+   return a + b;
+}
+// sum() is invoked as a function
+// this in sum() is a global object (window)
+sum(15, 16);     // => 31
+window.myNumber; // => 20
+                    </pre>
+                    <p>在sum(15, 16)被调用的时候，JavaScript自动设置this指向全局对象，也就是浏览器里的window。 当this在所有函数作用域以外(最上层的作用域：全局执行的上下文)调用时，它也指向全局对象：
+                    </p>
+                    <pre>
+console.log(this === window); // => true
+this.myString = 'Hello World!';
+console.log(window.myString); // => 'Hello World!'
+                    </pre>
+                    <p><strong style="color:#009688">2.2. 函数调用中的this, strict模式</strong></p>
+                    <p><strong>strict模式下，函数调用中的this是undefined</strong></p>
+                    <p>strict模式在ECMAScript 5.1中被引入，它是一个受限制的JavaScript变种，提供了更好的安全性以及错误检查。为了使用它，把'use strict'放在函数体的开始。这个模式会影响执行的上下文，把this变成undefined。函数执行的上下文跟上面的例子2.1相反，不再是全局对象 在strict模式下执行函数的例子:
+                    </p>
+                    <pre>
+function multiply(a, b) {
+    'use strict'; // enable the strict mode
+    console.log(this === undefined); // => true
+    return a * b;
+}
+// multiply() function invocation with strict mode enabled
+// this in multiply() is undefined
+multiply(2, 5); // => 10
+                    </pre>
+                    <p>当multiply(2, 5)作为函数被调用时，this是undefined。 strict模式不仅在当前作用域起作用，也会对内部的作用域起作用(对所有在内部定义的函数有效)：
+                    </p>
+                    <pre>
+function execute() {
+    'use strict'; // activate the strict mode
+    function concat(str1, str2) {
+        // the strict mode is enabled too
+        console.log(this === undefined); // => true
+        return str1 + str2;
+    }
+    // concat() is invoked as a function in strict mode
+    // this in concat() is undefined
+    concat('Hello', ' World!'); // => "Hello World!"
+}
+execute();
+                    </pre>
+                    <p>'use strict' 插入在execute函数体的一开始, 使它在execute函数的作用域内起作用。 因为concat定义在execute的作用域内, 它也会继承strict模式， 这导致调用concat('Hello', ' World!')时， this是undefined。 单个的JavaScript文件可能既包含strict模式又包含非strict模式。所以，在单个的脚本内，同样的调用方法可能有不同的上下文行为：
+                    </p>
+                    <pre>
+function nonStrictSum(a, b) {
+    // non-strict mode
+    console.log(this === window); // => true
+    return a + b;
+}
+function strictSum(a, b) {
+    'use strict';
+    // strict mode is enabled
+    console.log(this === undefined); // => true
+    return a + b;
+}
+// nonStrictSum() is invoked as a function in non-strict mode
+// this in nonStrictSum() is the window object
+nonStrictSum(5, 6); // => 11
+// strictSum() is invoked as a function in strict mode
+// this in strictSum() is undefined
+strictSum(8, 12); // => 20
+                    </pre>
+                    <p><strong style="color:#009688">2.3. 陷阱: 内部函数中的this</strong></p>
+                    <p>一个函数调用中的常见错误就是以为this在内部函数中跟在外部函数中一样。 正确来说，内部函数的上下文依赖于调用方法，而不是外部函数的上下文。 为了能使this跟预期的一样，用隐式调用来修改内部函数的上下文(用.call()或者.apply(), 如5.所示)或者创建一个绑定函数(用.bind(), 如6.所示）。 下面的例子计算了2个数字的和：
+                    </p>
+                    <pre>
+var numbers = {
+   numberA: 5,
+   numberB: 10,
+   sum: function() {
+     console.log(this === numbers); // => true
+     function calculate() {
+       // this is window or undefined in strict mode
+       console.log(this === numbers); // => false
+       return this.numberA + this.numberB;
+     }
+     return calculate();
+   }
+};
+numbers.sum(); // => NaN or throws TypeError in strict mode
+                    </pre>
+                    <p>numbers.sum()是一个对象上的方法调用 (见3.)，所以sum中的上下文是numbers对象。calculate函数定义在sum内部，所以你会指望calculate()中的this也是numbers对象。然而，calculate()是一个函数调用（而不是方法调用），它的this是全局对象window(例子2.1.)或者strict模式下的undefined(例子2.2.)。即使外部函数sum的上下文是numbers对象，它在这里也没有影响。numbers.sum()的调用结果是NaN或者strict模式下的TypeError: Cannot read property 'numberA' of undefined错误。因为calculate没有被正确调用，结果绝不是预期的5 + 10 = 15。 为了解决这个问题，calculate应该跟sum有一样的上下文，以便于使用numberA和numberB。解决方法之一是使用.call()方法(见章节5.):
+                    </p>
+                    <pre>
+var numbers = {
+   numberA: 5,
+   numberB: 10,
+   sum: function() {
+     console.log(this === numbers); // => true
+     function calculate() {
+       console.log(this === numbers); // => true
+       return this.numberA + this.numberB;
+     }
+     // use .call() method to modify the context
+     return calculate.call(this);
+   }
+};
+numbers.sum(); // => 15
+                    </pre>
+                    <p>calculate.call(this)像往常一样执行calculate，但是上下文由第一个参数指定。现在this.numberA + this.numberB相当于numbers.numberA + numbers.numberB，函数会返回预期的结果5 + 10 = 15。</p>
+                    <p><strong style="color:#009688">3. 方法调用</strong></p>
+                    <p>一个方法是作为一个对象的属性存储的函数。例如:</p>
+                    <pre>
+var myObject = {
+    // helloFunction is a method
+    helloFunction: function() {
+        return 'Hello World!';
+    }
+};
+var message = myObject.helloFunction();
+                    </pre>
+                    <p>helloFunction是myObject的一个方法。为了使用这个方法, 使用属性访问：myObject.helloFunction。 当一个表达式以属性访问的形式执行时，执行的是方法调用，它相当于以个函数接着(，一组用逗号分隔的参数以及)。 利用前面的例子，myObject.helloFunction()是对象myObject上的一个helloFunction的方法调用。[1, 2].join(',') 或/\s/.test('beautiful world')也被认为是方法调用。 区分函数调用(见2.)跟方法调用是很重要的，因为他们完全不同。他们最主要的区别在于方法调用要求函数以属性访问的形式调用(如&lt;expression&gt;.functionProperty()或者 &lt;expression&gt;['functionProperty']())，而函数调用并没有这样的要求(如 &lt;expression&gt;())。
+                    </p>
+                    <pre>
+['Hello', 'World'].join(', '); // method invocation
+({ ten: function() { return 10; } }).ten(); // method invocation
+var obj = {};
+obj.myFunction = function() {
+  return new Date().toString();
+};
+obj.myFunction(); // method invocation
+
+var otherFunction = obj.myFunction;
+otherFunction();     // function invocation
+parseFloat('16.60'); // function invocation
+isNaN(0);            // function invocation
+                    </pre>
+                    <p><strong style="color:#009688">3.1. 方法调用中的this</strong></p>
+                    <p>在方法调用中，this是拥有这个方法的对象</p>
+                    <p>当调用一个对象上的方法时，this变成这个对象自身。 让我们一起来创建一个对象，它带有一个可以增大数字的方法：</p>
+                    <pre>
+var calc = {
+  num: 0,
+  increment: function() {
+    console.log(this === calc); // => true
+    this.num += 1;
+    return this.num;
+  }
+};
+// method invocation. this is calc
+calc.increment(); // => 1
+calc.increment(); // => 2
+                    </pre>
+                    <p>调用calc.increment()会把increment函数的上下文变成calc对象。所以，用this.num来增加num这个属性跟预期一样工作。 javaScript对象会从它的prototype继承方法。当这个继承的方法在新的对象上被调用时，上下文仍然是该对象本身：
+                    </p>
+                    <pre>
+var myDog = Object.create({
+  sayName: function() {
+     console.log(this === myDog); // => true
+     return this.name;
+  }
+});
+myDog.name = 'Milo';
+// method invocation. this is myDog
+myDog.sayName(); // => 'Milo'
+                    </pre>
+                    <p>Object.create()创建了一个新的对象myDog，并且设置了它的prototype。myDog继承了sayName方法。当执行myDog.sayName()时，myDog是调用的上下文。 在ECMAScript 6的class语法中，方法调用的上下文也是这个实例本身：</p>
+                    <pre>
+class Planet {
+  constructor(name) {
+    this.name = name;
+  }
+  getName() {
+    console.log(this === earth); // => true
+    return this.name;
+  }
+}
+var earth = new Planet('Earth');
+// method invocation. the context is earth
+earth.getName(); // => 'Earth'
+                    </pre>
+                    <p><strong style="color:#009688">3.2. 陷阱:从object中分离方法</strong></p>
+                    <p>一个对象中的方法可以赋值给另一个变量。当用这个变量调用方法时，你可能以为this指向定义这个方法的对象。 正确来说如果这个方法在没有对象的时候被调用，它会变成函数调用：this变成全局对象window或者strict模式下的undefined(见2.1和2.2)。 用绑定函数(用.bind(), 见6.)可以修正上下文，使它变成拥有这个方法的对象。 下面的例子创建了Animal构造函数并创造了它的一个实例 - myCat。 setTimout()会在1秒钟之后输出myCat对象的信息：</p>
+                    <pre>
+function Animal(type, legs) {
+    this.type = type;
+    this.legs = legs;
+    this.logInfo = function() {
+        console.log(this === myCat); // => false
+        console.log('The ' + this.type + ' has ' + this.legs + ' legs');
+    }
+}
+var myCat = new Animal('Cat', 4);
+// logs "The undefined has undefined legs"
+// or throws a TypeError in strict mode
+setTimeout(myCat.logInfo, 1000);
+                    </pre>
+                    <p>你可能会以为setTimout会调用myCat.logInfo()，输出关于myCat对象的信息。实际上，这个方法在作为参数传递给setTimout(myCat.logInfo)时已经从原对象上分离了，1秒钟之后发生的是一个函数调用。当logInfo作为函数被调用时，this是全局对象，或者strict模式下的undefined（反正不是myCat对象），所以不会正确地输出信息。 函数可以通过.bind()方法跟一个对象绑定(见6.)。如果这个分离的方法与myCat绑定，那么上下文的问题就解决了：
+                    </p>
+                    <pre>
+function Animal(type, legs) {
+    this.type = type;
+    this.legs = legs;
+    this.logInfo = function() {
+        console.log(this === myCat); // => true
+        console.log('The ' + this.type + ' has ' + this.legs + ' legs');
+    };
+}
+var myCat = new Animal('Cat', 4);
+// logs "The Cat has 4 legs"
+setTimeout(myCat.logInfo.bind(myCat), 1000);
+                    </pre>
+                    <p>myCat.logInfo.bind(myCat)返回一个跟logInfo执行效果一样的函数，但是它的this即使在函数调用情况下也是myCat。</p>
+                    <p><strong style="color:#009688">4. 构造函数调用</strong></p>
+                    当new关键词紧接着函数对象,(,一组逗号分隔的参数以及)时被调用，执行的是<strong>构造函数</strong>调用如new RegExp('\\d')。 这个例子声明了一个Country函数，并且将它作为一个构造函数调用：
+                    <pre>
+function Country(name, traveled) {
+    this.name = name ? name : 'United Kingdom';
+    this.traveled = Boolean(traveled); // transform to a boolean
+}
+Country.prototype.travel = function() {
+    this.traveled = true;
+};
+// Constructor invocation
+var france = new Country('France', false);
+// Constructor invocation
+var unitedKingdom = new Country;
+
+france.travel(); // Travel to France
+                    </pre>
+                    <p>
+                        new Country('France', false)是Country函数的构造函数调用。它的执行结果是一个name属性为'France'的新的对象。 如果这个构造函数调用时不需要参数，那么括号可以省略：new Country。 从ECMAScript 6开始，JavaScript允许用class关键词来定义构造函数：
+                    </p>
+                    <pre>
+class City {
+  constructor(name, traveled) {
+    this.name = name;
+    this.traveled = false;
+  }
+  travel() {
+    this.traveled = true;
+  }
+}
+// Constructor invocation
+var paris = new City('Paris', false);
+paris.travel();
+                    </pre>
+                    <p>new City('Paris')是构造函数调用。这个对象的初始化由这个类中一个特殊的方法constructor来处理。其中，this指向新创建的对象。 构造函数创建了一个新的空的对象，它从构造函数的原型继承了属性。构造函数的作用就是去初始化这个对象。 可能你已经知道了，在这种类型的调用中，上下文指向新创建的实例。这是我们下一章的主题。 当属性访问myObject.myFunction前面有一个new关键词时，JavaScript会执行构造函数调用而不是原来的方法调用。例如new myObject.myFunction()：它相当于先用属性访问把方法提取出来extractedFunction = myObject.myFunction，然后利用把它作为构造函数创建一个新的对象： new extractedFunction()。</p>
+                    <p><strong style="color:#009688">4.1. 构造函数中的this</strong></p>
+                    <p><strong>在构造函数调用中this指向新创建的对象</strong></p>
+                    <p>构造函数调用的上下文是新创建的对象。它利用构造函数的参数初始化新的对象，设定属性的初始值，添加时间处理函数等等。 让我们来看看下面例子里的上下文：
+                    </p>
+                    <pre>
+function Foo () {
+    console.log(this instanceof Foo); // => true
+    this.property = 'Default Value';
+}
+// Constructor invocation
+var fooInstance = new Foo();
+fooInstance.property; // => 'Default Value'
+                    </pre>
+                    <p>new Foo()正在调用一个构造函数，它的上下文是fooInstance。其中，Foo被初始化了：this.property被赋予了一个默认值。 同样的情况在用class语法（从ES6起）时也会发生，唯一的区别是初始化在constructor方法中进行：
+                    </p>
+                    <pre>
+class Bar {
+    constructor() {
+        console.log(this instanceof Bar); // => true
+        this.property = 'Default Value';
+    }
+}
+// Constructor invocation
+var barInstance = new Bar();
+barInstance.property; // => 'Default Value'
+                    </pre>
+                    <p>当new Bar()执行时，JavaScript创建了一个空的对象，把它作为constructor方法的上下文。现在，你可以用this关键词给它添加属性：this.property = 'Default Value'。</p>
+                    <p><strong style="color:#009688">4.2. 陷阱: 忘了new</strong></p>
+                    <p>有些JavaScirpt函数不是只在作为构造函数调用的时候才创建新的对象，作为函数调用时也会，例如RegExp：</p>
+                    <pre>
+var reg1 = new RegExp('\\w+');
+var reg2 = RegExp('\\w+');
+
+reg1 instanceof RegExp;      // => true
+reg2 instanceof RegExp;      // => true
+reg1.source === reg2.source; // => true
+                    </pre>
+                    <p>当执行new RegExp('\\w+')和RegExp('\\w+')时，JavaScrit会创建相同的正则表达式对象。 因为有些构造函数在new关键词缺失的情况下，可能跳过对象初始化，用函数调用创建对象会存在问题（不包括工厂模式）。 下面的例子就说明了这个问题：</p>
+                    <pre>
+function Vehicle(type, wheelsCount) {
+    this.type = type;
+    this.wheelsCount = wheelsCount;
+    return this;
+}
+// Function invocation
+var car = Vehicle('Car', 4);
+car.type;       // => 'Car'
+car.wheelsCount // => 4
+car === window  // => true
+                    </pre>
+                    <p>Vehicle是一个在上下文上设置了type跟wheelsCount属性的函数。当执行Vehicle('Car', 4)时，返回了一个car对象，它的属性是正确的：car.type是'Car'， car.wheelsCount是4。你可能以为它正确地创建并初始化了对象。 然而，在函数调用中，this是window对象(见2.1.)，Vehicle('Car', 4)实际上是在给window对象设置属性--这是错的。它并没有创建一个新的对象。 当你希望调用构造函数时，确保你使用了new操作符：
+                    </p>
+                    <pre>
+function Vehicle(type, wheelsCount) {
+    if (!(this instanceof Vehicle)) {
+        throw Error('Error: Incorrect invocation');
+    }
+    this.type = type;
+    this.wheelsCount = wheelsCount;
+    return this;
+}
+// Constructor invocation
+var car = new Vehicle('Car', 4);
+car.type               // => 'Car'
+car.wheelsCount        // => 4
+car instanceof Vehicle // => true
+
+// Function invocation. Generates an error.
+var brokenCat = Vehicle('Broken Car', 3);
+                    </pre>
+                    <p>new Vehicle('Car', 4)工作正常：因为new关键词出现在构造函数调用前，一个新的对象被创建并初始化。 在构造函数里我们添加了一个验证this instanceof Vehicle来确保执行的上下文是正确的对象类型。如果this不是Vehicle，那么就会报错。这样，如果执行Vehicle('Broken Car', 3)(没有new)，我们会得到一个异常：Error: Incorrect invocation。</p>
+                    <p><strong style="color:#009688">5. 隐式调用</strong></p>
+                    <p>当函数被.call()或者.apply()调用时，执行的是隐式调用。 函数在JavaScript中是第一类对象，这意味着函数也是对象。它的类型是Function。根据这个函数对象所拥有的方法列表，.call()和.apply()可以跟一个可变的上下文一起调用函数。 方法.call(thisArg[, arg1[, arg2[, ...]]])将接受的第一个参数thisArg作为调用时的上下文，arg1, arg2, ...这些则作为参数传入被调用的函数。方法.apply(thisArg, [args])将接受的第一个参数thisArg作为调用时的上下文，并且接受另一个类似数组的对象[args]作为被调用函数的参数传入。 下面是一个隐式调用的例子：
+                    </p>
+                    <pre>
+function increment(number) {
+    return ++number;
+}
+increment.call(undefined, 10);    // => 11
+increment.apply(undefined, [10]); // => 11
+                    </pre>
+                    <p>increment.call()和increment.apply()都用参数10调用了这个自增函数。 这两者的主要区别是.call()接受一组参数，例如myFunction.call(thisValue, 'value1', 'value2')。然而.apply()接受的一组参数必须是一个类似数组的对象，例如myFunction.apply(thisValue, ['value1', 'value2'])。</p>
+                    <p><strong style="color:#009688">5.1. 隐式调用中的this</strong></p>
+                    <p>在隐式调用.call()或.apply()中，this是第一个参数</p>
+                    <p>很明显，在隐式调用中，this是传入.call()或.apply()中的第一个参数。下面的这个例子就说明了这一点：</p>
+                    <pre>
+var rabbit = { name: 'White Rabbit' };
+function concatName(string) {
+    console.log(this === rabbit); // => true
+    return string + this.name;
+}
+// Indirect invocations
+concatName.call(rabbit, 'Hello ');  // => 'Hello White Rabbit'
+concatName.apply(rabbit, ['Bye ']); // => 'Bye White Rabbit'
+                    </pre>
+                    <p>当一个函数应该在特定的上下文中执行时，隐式调用就非常有用。例如为了解决方法调用时，this总是window或strict模式下的undefined的上下文问题(见2.3.)。隐式调用可以用于模拟在一个对象上调用某个方法（见之前的代码样例）。 另一个实际的例子是在ES5中，在创建的类的结构层次中中，调用父类的构造函数：
+                    </p>
+                    <pre>
+function Runner(name) {
+    console.log(this instanceof Rabbit); // => true
+    this.name = name;
+}
+function Rabbit(name, countLegs) {
+    console.log(this instanceof Rabbit); // => true
+    // Indirect invocation. Call parent constructor.
+    Runner.call(this, name);
+    this.countLegs = countLegs;
+}
+var myRabbit = new Rabbit('White Rabbit', 4);
+myRabbit; // { name: 'White Rabbit', countLegs: 4 }
+                    </pre>
+                    <p>Rabbit中的Runner.call(this, name)隐式调用了父类的函数来初始化这个对象。</p>
+                    <p><strong style="color:#009688">6. 绑定函数</strong></p>
+                    <p><strong>绑定函数</strong>是一个与对象绑定的函数。通常它是通过在原函数上使用 .bind()来创建的。原函数和绑定的函数共享代码跟作用域，但是在执行时有不同的上下文。 方法.bind(thisArg[, arg1[, arg2[, ...]]])接受第一个参数thisArg作为绑定函数执行时的上下文，并且它接受一组可选的参数 arg1, arg2, ...作为被调用函数的参数。它返回一个绑定了thisArg的新函数。 下面的代码创建了一个绑定函数并在之后调用它：
+                    </p>
+                    <pre>
+function multiply(number) {
+    'use strict';
+    return this * number;
+}
+// create a bound function with context
+var double = multiply.bind(2);
+// invoke the bound function
+double(3);  // => 6
+double(10); // => 20
+                    </pre>
+                    <p>multiply.bind(2)返回了一个新的函数对象double，double绑定了数字2。multiply跟double有相同的代码跟作用域。 跟.apply()以及.call()方法(见5.)马上调用函数不同，.bind()函数返回一个新的方法，它应该在之后被调用，只是this已经被提前设置好了。
+                    </p>
+                    <p><strong style="color:#009688">6.1. 绑定函数中的this</strong></p>
+                    <p>在调用绑定函数时，this是.bind()的第一个参数。</p>
+                    <p>.bind()的作用是创建一个新的函数，它在被调用时的上下文是传入.bind()的第一个参数。它是一种非常强大的技巧，使你可以创建一个定义了this值的函数。 让我们来看看如何在一个绑定函数中设置this：
+                    </p>
+                    <pre>
+var numbers = {
+    array: [3, 5, 10],
+    getNumbers: function() {
+        return this.array;
+    }
+};
+// Create a bound function
+var boundGetNumbers = numbers.getNumbers.bind(numbers);
+boundGetNumbers(); // => [3, 5, 10]
+// Extract method from object
+var simpleGetNumbers = numbers.getNumbers;
+simpleGetNumbers(); // => undefined or throws an error in strict mode
+                    </pre>
+                    <p>numbers.getNumbers.bind(numbers)返回了一个绑定了number对象的boundGetNumbers函数。boundGetNumbers()调用时的this是number对象，并能够返回正确的数组对象。numbers.getNumbers函数能在不绑定的情况下赋值给变量simpleGetNumbers。在之后的函数调用中，simpleGetNumbers()的this是window或者strict模式下的undefined，不是number对象(见3.2. 陷阱)。在这个情况下，simpleGetNumbers()不会正确返回数组。</p>
+                    <p>.bind()永久性地建立了一个上下文的链接，并且会一直保持它。一个绑定函数不能通过.call()或者.apply()来改变它的上下文，甚至是再次绑定也不会有什么作用。 只有用绑定函数的构造函数调用方法能够改变上下文，但并不推荐这个方法（因为构造函数调用用的是常规函数而不是绑定函数）。 下面的例子声明了一个绑定函数，接着试图改变它预先定义好的上下文：</p>
+                    <pre>
+function getThis() {
+    'use strict';
+    return this;
+}
+var one = getThis.bind(1);
+// Bound function invocation
+one(); // => 1
+// Use bound function with .apply() and .call()
+one.call(2);  // => 1
+one.apply(2); // => 1
+// Bind again
+one.bind(2)(); // => 1
+// Call the bound function as a constructor
+new one(); // => Object
+                    </pre>
+                    <p>只有new one()改变了绑定函数的上下文，其他方式的调用中this总是等于1。</p>
+                    <p><strong style="color:#009688">7. 箭头函数</strong></p>
+                    <p><strong>箭头函数</strong>被设计来以更简短的形式定义函数。并且能从词法上绑定上下文。它能以下面的方式被使用：</p>
+                    <pre>
+var hello = (name) => {
+    return 'Hello ' + name;
+};
+hello('World'); // => 'Hello World'
+// Keep only even numbers
+[1, 2, 5, 6].filter(item => item % 2 === 0); // => [2, 6]
+                    </pre>
+                    <p>箭头函数带来了更轻量的语法，避免了冗长的function关键词。你甚至可以在函数只有一个语句的时候省略return。</p>
+                    <p>因为箭头函数是匿名的，这意味着它的name属性是个空字符串''。这样一来，它就没有一个词法上的函数名（函数名在递归跟事件解绑时会比较有用）。同时，跟常规函数相反，它也不提供arguments对象。但是，这在ES6中通过rest parameters修复了：</p>
+                    <pre>
+var sumArguments = (...args) => {
+   console.log(typeof arguments); // => 'undefined'
+   return args.reduce((result, item) => result + item);
+};
+sumArguments.name      // => ''
+sumArguments(5, 5, 6); // => 16
+                    </pre>
+                    <p><strong style="color:#009688">7.1. 箭头函数中的this</strong></p>
+                    <p>this是箭头函数定义时封装好的上下文</p>
+                    <p>箭头函数并不会创建它自己的上下文，它从它定义处的外部函数获得this上下文。下面的例子说明了这个上下文透明的特性：</p>
+                    <pre>
+class Point {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+    log() {
+        console.log(this === myPoint); // => true
+        setTimeout(()=> {
+            console.log(this === myPoint);      // => true
+            console.log(this.x + ':' + this.y); // => '95:165'
+        }, 1000);
+    }
+}
+var myPoint = new Point(95, 165);
+myPoint.log();
+                    </pre>
+                    <p>setTimeout在调用箭头函数时跟log()使用了相同的上下文(myPoint对象)。正如所见，箭头函数从它定义处“继承”了函数的上下文。 如果在这个例子里尝试用常规函数，它会建立自己的上下文(window或strict模式下的undefined)。所以，为了让同样的代码能在函数表达式中正确运行，需要手动绑定上下文：setTimeout(function() {...}.bind(this))。这样一来就显得很啰嗦，不如用箭头函数来得简短。 如果箭头函数定义在最上层的作用域（在所有函数之外），那么上下文就总是全局对象（浏览器中的window对象）：
+                    </p>
+                    <pre>
+var getContext = () => {
+   console.log(this === window); // => true
+   return this;
+};
+console.log(getContext() === window); // => true
+                    </pre>
+                    <p>箭头函数会一劳永逸地绑定词法作用域。即使使用修改上下文的方法，this也不能被改变：</p>
+                    <pre>
+var numbers = [1, 2];
+(function() {
+    var get = () => {
+        console.log(this === numbers); // => true
+        return this;
+    };
+    console.log(this === numbers); // => true
+    get(); // => [1, 2]
+    // Use arrow function with .apply() and .call()
+    get.call([0]);  // => [1, 2]
+    get.apply([0]); // => [1, 2]
+    // Bind
+    get.bind([0])(); // => [1, 2]
+}).call(numbers);
+                    </pre>
+                    <p>
+                        一个函数表达式通过.call(numbers)被隐式调用了，这使得这个调用的this变成了numbers。这样一来，箭头函数get的this也变成了numbers，因为它是从词法上获得的上下文。
+                    </p>
+                    <p>无论get是怎么被调用的，它一直保持了一开始的上下文numbers。用其他上下文的隐式调用(通过.call()或.apply())或者重新绑定(通过.bind())都不会起作用</p>
+                    <p>箭头函数不能用作构造函数。如果像构造函数一样调用new get()， JavaScript会抛出异常：TypeError: get is not a constructor。</p>
+                    <p><strong style="color:#009688">7.2. 陷阱: 用箭头函数定义方法</strong></p>
+                    <p>你可能想用箭头函数在一个对象上定义方法。这很合情合理：箭头函数的定义相比于函数表达式短得多：例如(param) => {...}而不是function(param) {..}。 这个例子用箭头函数在Period类上定义了format()方法：
+                    </p>
+                    <pre>
+function Period (hours, minutes) {
+    this.hours = hours;
+    this.minutes = minutes;
+}
+Period.prototype.format = () => {
+    console.log(this === window); // => true
+    return this.hours + ' hours and ' + this.minutes + ' minutes';
+};
+var walkPeriod = new Period(2, 30);
+walkPeriod.format(); // => 'undefined hours and undefined minutes'
+                    </pre>
+                    <p>由于format是一个箭头函数，并且它定义在全局上下文（最顶层的作用域）中，它的this指向window对象。即使format作为方法在一个对象上被调用如walkPeriod.format()，window仍然是这次调用的上下文。之所以会这样是因为箭头函数有静态的上下文，并不会随着调用方式的改变而改变。 函数表达式可以解决这个问题，因为一个常规的函数会随着调用方法而改变其上下文:
+                    </p>
+                    <pre>
+function Period (hours, minutes) {
+    this.hours = hours;
+    this.minutes = minutes;
+}
+Period.prototype.format = function() {
+    console.log(this === walkPeriod); // => true
+    return this.hours + ' hours and ' + this.minutes + ' minutes';
+};
+var walkPeriod = new Period(2, 30);
+walkPeriod.format(); // => '2 hours and 30 minutes'
+                    </pre>
+                    <p>walkPeriod.format()是一个对象上的方法调用(见3.1.)，它的上下文是walkPeriod对象。this.hours等于2，this.minutes等于30，所以这个方法返回了正确的结果：'2 hours and 30 minutes'。</p>
+                </div>
+                <div>
+                    <h3>2.javascript是如何实现继承的？</h3>
+                    <p>下面介绍几种主流的继承方式:</p>
+                    <p>(1).原型链继承</p>
+                    <pre>
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+Person.prototype.say = function(){
+    console.log('hello, my name is ' + this.name);
+};
+function Man() {
+}
+Man.prototype = new Person('pursue');
+var man1 = new Man();
+man1.say(); //hello, my name is pursue
+var man2 = new Man();
+console.log(man1.say === man2.say);//true
+console.log(man1.name === man2.name);//true
+                    </pre>
+                    <p>这种继承方式很直接，为了获取Person的所有属性方法(实例上的和原型上的)，直接将父类的实例new Person('pursue')赋给了子类的原型，其实子类的实例man1,man2本身是一个完全空的对象，所有的属性和方法都得去原型链上去找，因而找到的属性方法都是同一个。所以直接利用原型链继承是不现实的。</p>
+                    <p>(2).利用构造函数继承</p>
+                    <pre>
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+Person.prototype.say = function(){
+    console.log('hello, my name is ' + this.name);
+};
+function Man(name, age) {
+    Person.apply(this, arguments);
+}
+//Man.prototype = new Person('pursue');
+var man1 = new Man('joe');
+var man2 = new Man('david');
+console.log(man1.name === man2.name);//false
+man1.say(); //say is not a function
+                    </pre>
+                    <p>
+                        这里子类的在构造函数里利用了apply去调用父类的构造函数，从而达到继承父类属性的效果，比直接利用原型链要好的多，至少每个实例都有自己那一份资源，但是这种办法只能继承父类的实例属性，因而找不到say方法，为了继承父类所有的属性和方法，则就要修改原型链，从而引入了组合继承方式。
+                    </p>
+                    <p>(3).组合继承</p>
+                    <pre>
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+Person.prototype.say = function(){
+    console.log('hello, my name is ' + this.name);
+};
+function Man(name, age) {
+    Person.apply(this, arguments);
+}
+Man.prototype = new Person();
+var man1 = new Man('joe');
+var man2 = new Man('david');
+console.log(man1.name === man2.name);//false
+console.log(man1.say === man2.say);//true
+man1.say(); //hello, my name is joe
+                    </pre>
+                    <p>需要注意的是man1和man2的实例属性其实是覆盖了原型属性，但是并没要覆盖掉原型上的say方法（因为它们没有），所以这里man1.say === man2.say依然返回true，因而需要十分小心没有覆盖掉的原型属性，因为它是所有实例共有的。</p>
+                    <p>(4).寄生组合继承</p>
+                    <p>说实话我真不知道下面的这种形式叫这名字，但是它确实是最流行，最经典的javascript的继承方式。其实，只需要明白原型对象的结构即可：</p>
+                    <pre>
+function Person (name, age) {
+            this.name = name;
+            this.age = age;
+        }
+Person.prototype.say = function(){
+    console.log('hello, my name is ' + this.name);
+};
+function Man(name, age) {
+    Person.apply(this, arguments);
+}
+Man.prototype = Object.create(Person.prototype);//a.
+Man.prototype.constructor = Man;//b.
+var man1 = new Man('pursue');
+var man2 = new Man('joe');
+console.log(man1.say == man2.say);
+console.log(man1.name == man2.name);                        
+                    </pre>
+                    <p>其实寄生组合继承和上面的组合继承区别仅在于构造子类原型对象的方式上（a.和b.），这里用到了Object.creat(obj)方法，该方法会对传入的obj对象进行浅拷贝，类似于：</p>
+                    <pre>
+function create(obj){
+    function T(){};
+    T.prototype = obj;
+    return new T();
+}                       
+                    </pre>
+                </div>
+                <div>
+                    <h3>3.</h3>
+                </div>
+                <div>
+                    <h3>4.什么是闭包 (closure)，如何使用它，为什么要使用它？</h3>
+                    <p>闭包的特点就是函数嵌套函数，内部函数可以引用外部函数的参数和变量，参数和变量不会被垃圾回收机制所收回</p>
+                    <p>闭包的好处有：</p>
+                    <p>(1)希望一个变量长期驻扎在内存当中的时候就可以使用闭包;</p>
+                    <p>(2)避免全局变量的污染;</p>
+                    <p>(3)私有成员的存在;</p>
+                    <p>闭包的使用场景:</p>
+                    <p>(1)模块化代码</p>
+                    <p>(2)在循环中直接找到对应的元素的索引</p>
+                </div>
+                <div>
+                    <h3>5.请描述下事件冒泡机制和事件捕获机制</h3>
+                    <p>事件流描述的是从页面中接收事件的顺序</p>
+                    <p>事件冒泡：即事件最开始由具体的元素(文档中嵌套层次最深的那个节点)接收，然后逐级向上传播至最不具体的那个节点(文档)</p>
+                    <p>不太具体的节点应该更早接收到事件，而最具体的节点最后接收到事件。</p>
+                    <p><strong>事件处理程序：</strong></p>
+                    <p>(1)HTML事件处理程序</p>
+                    <p>(2)DOM 0级事件处理程序</p>
+                    <p>(3)DMO 2级事件处理程序</p>
+                </div>
+                <div>
+                    <h3>6.请解释一下JavaScript的同源策略</h3>
+                    <p>“同源策略(Same-Origin Policy)”，它是由Netscape提出的一个著名的安全策略。现在所有支持JavaScript 的浏览器都会使用这个策略。所谓同源，就是必须协议、域名、端口都一致的，才叫做同源。例如：http://www.12306.cn和https://www.12306.cn，由于协议不一致，就不是同源。http://127.0.0.1:8080/test1和http://localhost:8080/test1 也不属于同源，因为域名不一致。端口不同当然也不叫同源了。 如果非同源，那么在请求数据时，浏览器会在控制台中报一个异常，提示拒绝访问。这是一个令web开发人员非常手疼的问题。比如，我现在打开百度网页，然后在控制台中请求CSDN的网页，那么就会报异常
+                    </p>
+                </div>
+                <div>
+                    <h3>7.call(),apply(),bind()的区别</h3>
+                    <p>在javascipt中，这三者都是用来改变函数的this对象的指向的，他们有什么样的区别呢？</p>
+                    <p>在说区别之前还是先总结一下三者的相似之处：</p>
+                    <p>(1)都是用来改变函数的this对象的指向的</p>
+                    <p>(2)第一个参数都是this要指向的对象</p>
+                    <p>(3)都可以利用后续参数传参</p>
+                    <p>那么他们的区别在哪里呢？先看一个例子。</p>
+                    <pre>
+var xw = {
+name : "小王",
+gender : "男",
+age : 24,
+say : function() {
+    alert(this.name + " , " + this.gender + " ,今年" + this.age);                                
+}
+
+}
+var xh = {
+name : "小红",
+gender : "女",
+age : 18
+}
+xw.say();
+                    </pre>
+                    <p>本身没什么好说的，显示的肯定是小王 ， 男 ， 今年24。 那么如何用xw的say方法来显示xh的数据呢。
+                    </p>
+                    <p>对于call可以这样:xw.say.call(xh);</p>
+                    <p>对于apply可以这样：xw.say.apply(xh);</p>
+                    <p>而对于bind来说需要这样：xw.say.bind(xh)();</p>
+                    <p>如果直接写xw.say.bind(xh)是不会有任何结果的，看到区别了吗？call和apply都是对函数的直接调用，而bind方法返回的仍然是一个函数，因此后面还需要()来进行调用才可以。那么call和apply有什么区别呢？我们把例子稍微改写一下。</p>
+                    <pre>
+var xw = {
+    name : "小王",
+    gender : "男",
+    age : 24,
+    say : function(school,grade) {
+            alert(this.name + " , " + this.gender + " ,今年" + this.age + " ,在" + school + "上" + grade);                                
+    }
+}
+var xh = {
+    name : "小红",
+    gender : "女",
+    age : 18
+}
+                </pre>
+                    <p>可以看到say方法多了两个参数，我们通过call/apply的参数进行传参。 对于call来说是这样的 xw.say.call(xh,"实验小学","六年级"); </p>
+                    <p>而对于apply来说是这样的 xw.say.apply(xh,["实验小学","六年级"]);
+                    </p>
+                    <p>看到区别了吗，call后面的参数与say方法中是一一对应的，而apply的第二个参数是一个数组，数组中的元素是和say方法中一一对应的，这就是两者最大的区别。 那么bind怎么传参呢？它可以像call那样传参。 xw.say.bind(xh,"实验小学","六年级")();
+                    </p>
+                    <p>但是由于bind返回的仍然是一个函数，所以我们还可以在调用的时候再进行传参。 xw.say.bind(xh)("实验小学","六年级");
+                    </p>
+                </div>
+                <div>
+                    <h3>8.什么是 Event Loop？</h3>
+                    <p>Event Loop是一个很重要的概念，指的是计算机系统的一种运行机制。Javascript语言就采用这种机制，来解决单线程运行带来的一些问题。想要理解Event Loop，就要从程序的运行模式讲起。运行以后的程序叫做“进程”，一般情况下，一个进程一次只能执行一个任务。如果有很多任务需要执行，不外乎三种解决方法。(1)排队。因为一个进程一次只能执行一个任务，只好等前面的任务执行完了，再执行后面的任务。(2)新建进程，使用fork命令，为每个任务新疆一个进程。(3)新建线程，因为进程太耗费资源，所以如今的程序往往允许一个进程包含多个线程，由线程去完成任务。以Javascript语言为例，它是一种单线程语言，所有任务都在一个线程上完成，即采用上面的第一种方法。一旦遇到大量任务或者遇到一个耗时的任务，网页就会出现“假死”，因为javascript停不下来，也就无法响应用户的行为。如果某个任务很耗时，比如涉及很多I/O操作，那么线程的大部分运行时间都在空等I/O操作的返回结果。这种运行方式称为“同步模式”或“阻塞模式”。但如果采用多线程又不仅占用多倍的系统资源，也闲置多倍的资源。这样显然不合理。于是乎，就有了Event Loop,它是一个程序结构，用于等待和发送消息和事件。以I/O操作为例，每当遇到I/O操作的时候，主线程就让Event Loop线程去通知相应的I/O程序，然后接着往后运行，所以不存在等待事件。等到I/O程序完成操作，Event Loop线程再把结果返回主线程。主线程就调用事先设定的回调函数，完成整个任务。这种运行方式称为“异步模式”或“非阻塞模式”。这正是javascript语言的运行方式。单线程模型虽然对javascript构成了很大的限制，但也因此使它具备了其他语言不具备的优势。如果部署得好，javascript程序是不会出现堵塞的，这就是为什么node.js平台可以用很少的资源，应付大流量访问的原因。</p>
+                </div>
+                <div>
+                    <h3>12.javascript异步编程方法</h3>
+                    <p>javascript“异步模式”编程的四种方法：</p>
+                    <p>1.回调函数：这是异步编程最基本的方法。回调函数的优点是简单、容易理解和部署，缺点是不利于代码的阅读和维护，程序的流程会很混乱，而且每个任务只能指定一个回调函数。</p>
+                    <p>2.事件监听：另一种思路是采用事件驱动模式。任务的执行不取决于代码的顺序，而取决于某个事件是否发生。这种方法的优点是比较容易理解，可以绑定多个事件，每个事件可以指定多个回调函数。缺点是整个程序都要变成事件驱动型，运行流程会变得很不清晰。</p>
+                    <p>3.发布/订阅：我们假定，存在一个"信号中心"，某个任务执行完成，就向信号中心"发布"（publish）一个信号，其他任务可以向信号中心"订阅"（subscribe）这个信号，从而知道什么时候自己可以开始执行。这就叫做"发布/订阅模式"（publish-subscribe pattern），又称"观察者模式"（observer pattern）。 　　这个模式有多种实现，下面采用的是Ben Alman的Tiny Pub/Sub，这是jQuery的一个插件。</p>
+                    <p>4.Promises对象:Promises对象是CommonJS工作组提出的一种规范，目的是为异步编程提供统一接口。 　　简单说，它的思想是，每一个异步任务返回一个Promise对象，该对象有一个then方法，允许指定回调函数。
+                    </p>
+                </div>
+                <div>
+                    <h3>13.请解释什么是单页应用 (single page app), 以及如何使其对搜索引擎友好 (SEO-friendly)</h3>
+                    <p>越来越多的网站，开始采用"单页面结构"（Single-page application）。</p>
+                    <p>整个网站只有一张网页，采用Ajax技术，根据用户的输入，加载不同的内容。</p>
+                    <p>这种做法的好处是用户体验好、节省流量，缺点是AJAX内容无法被搜索引擎抓取。</p>
+                    <p>Discourse是一个论坛程序，严重依赖Ajax，但是又必须让Google收录内容。它的解决方法就是放弃井号结构，采用 History API。</p>
+                    <p>首先，用History API替代井号结构，让每个井号都变成正常路径的URL，这样搜索引擎就会抓取每一个网页。</p>
+                    <p>然后，定义一个JavaScript函数，处理Ajax部分，根据网址抓取内容（假定使用jQuery）。
+                    </p>
+                    <p>再定义鼠标的click事件。</p>
+                    <p>最后，设置服务器端。</p>
+                    <p>我们把所有要让搜索引擎收录的内容，都放在noscript标签之中。这样的话，用户依然可以执行AJAX操作，不用刷新页面，但是搜索引擎会收录每个网页的主要内容！</p>
+                </div>
+                <div>
+                    <h3>14.你怎么看 AMD vs CommonJS</h3>
+                </div>
+            </div>
+            <div class="bishi item">
+                <h3>在网上整理的一些Javascript笔试题</h3>
+                <div>
+                    <h3>1.</h3>
+                    <pre>
+(function(){
+    return typeof arguments;
+})();
+                    </pre>
+                    <input type="radio" name="1" />"object"
+                    <input type="radio" name="1" />"array"
+                    <input type="radio" name="1" />"arguments"
+                    <input type="radio" name="1" />"undefined"
+                    <h2>2.</h2>
+                    <pre>
+var f = function g(){
+return 23;
+};
+typeof g();
+                    </pre>
+                    <input type="radio" name="2" />"number"
+                    <input type="radio" name="2" />"undefined"
+                    <input type="radio" name="2" />"function"
+                    <input type="radio" name="2" />Error
+                    <h3>3.</h3>
+                    <pre>
+(function(x){
+    delete x;
+    return x;
+})(1);
+                    </pre>
+                    <input type="radio" name="3" />1
+                    <input type="radio" name="3" />null
+                    <input type="radio" name="3" />undefined
+                    <input type="radio" name="3" />Error
+                    <h3>4.</h3>
+                    <pre>
+var y=1;
+x = y = typeof x;
+x;
+                    </pre>
+                    <input type="radio" name="3" />1
+                    <input type="radio" name="3" />"number"
+                    <input type="radio" name="3" />undefined
+                    <input type="radio" name="3" />"undefined"
+                    <h3>5.</h3>
+                    <pre>
+(function f(f){
+return typeof f();
+})(function(){return 1;});
+                    </pre>
+                    <input type="radio" name="3" />"number"
+                    <input type="radio" name="3" />"undefined"
+                    <input type="radio" name="3" />"function"
+                    <input type="radio" name="3" />Error
+                    <h3>6.</h3>
+                    <pre>
+var foo = {
+    bar: function(){return this.baz;},
+    baz:1
+};
+(function(){
+    return typeof arguments[0]();
+})(foo.bar);
+                    </pre>
+                    <input type="radio" name="6" />"undefined"
+                    <input type="radio" name="6" />"object"
+                    <input type="radio" name="6" />"number"
+                    <input type="radio" name="6" />"function"
+                    <h3>7.</h3>
+                    <pre>
+var foo = {
+    bar:function(){return this.baz;},
+    baz:1
+}
+typeof (f = foo.bar)();
+                    </pre>
+                    <input type="radio" name="7" />"undefined"
+                    <input type="radio" name="7" />"object"
+                    <input type="radio" name="7" />"number"
+                    <input type="radio" name="7" />"function"
+                    <h3>8.</h3>
+                    <pre>
+var f = (function f() {return "1";},function g(){return 2;})();
+typeof f;
+                    </pre>
+                    <input type="radio" name="8" />"string"
+                    <input type="radio" name="8" />"number"
+                    <input type="radio" name="8" />"function"
+                    <input type="radio" name="8" />"undefined"
+                    <h3>9.</h3>
+                    <pre>
+var x=1;
+if(function f(){}){
+    x += typeof f;
+}
+x;
+                    </pre>
+                    <input type="radio" name="9" />1
+                    <input type="radio" name="9" />"1function"
+                    <input type="radio" name="9" />"1undefined"
+                    <input type="radio" name="9" />NaN
+                    <h3>10.</h3>
+                    <pre>
+var x = [typeof x,typeof y][1];
+typeof typeof x;
+                    </pre>
+                    <input type="radio" name="10" />"number"
+                    <input type="radio" name="10" />"string"
+                    <input type="radio" name="10" />"undefined"
+                    <input type="radio" name="10" />"object"
+                    <h3>11.</h3>
+                    <pre>
+(function(foo){
+    return typeof foo.bar;
+})({foo:{bar:1}});
+                    </pre>
+                    <input type="radio" name="11" />"undefined"
+                    <input type="radio" name="11" />"object"
+                    <input type="radio" name="11" />"number"
+                    <input type="radio" name="11" />Error
+                    <h3>12.</h3>
+                    <pre>
+(function f(){
+    function f(){return 1;}
+    return f();
+    function f(){return 2;}
+})();
+                    </pre>
+                    <input type="radio" name="12" />1
+                    <input type="radio" name="12" />2
+                    <input type="radio" name="12" />Error
+                    <input type="radio" name="12" />undefined
+                    <h3>13.</h3>
+                    <pre>
+                        function f(){return f;}
+                        new f() instanceof f;
+                    </pre>
+                    <input type="radio" name="13" />true
+                    <input type="radio" name="13" />false
+                    <h3>14.</h3>
+                    <pre>
+                       with(function(x,undefined){}) length; 
+                    </pre>
+                    <input type="radio" name="14" />1
+                    <input type="radio" name="14" />2
+                    <input type="radio" name="14" />undefined
+                    <input type="radio" name="14" />Error
+                </div>
+                <div>
+                    <h3>变态的JS作用域题目</h3>
+                    <h3>1.</h3>
+                    <pre>
+alert(a);
+var a = 10;
+alert(a);
+a();
+function a(){alert(2);}
+                    </pre>
+                    <h3>2.</h3>
+                    <pre>
+alert(a);
+var a=10;
+
+alert(a);
+function a(){
+    alert(20);
+}
+
+alert(a);
+var a=30;
+
+alert(a);
+
+function a(){alert(40);}
+alert(a);
+                    </pre>
+                    <h3>3.</h3>
+                    <pre>
+a();
+var a = function(){alert(1);}
+a();
+function a(){alert(2);}
+a();
+var a = function b(){alert(3);}
+a();
+                    </pre>
+                    <h3>4.</h3>
+                    <pre>
+var a = 0;
+
+function fn() {
+alert(a);
+a = 1;
+alert(a);
+}
+fn();
+                    </pre>
+                    <h3>5.</h3>
+                    <pre>
+var a = 0;
+
+function fn() {
+alert(a);
+var a = 1;
+alert(a);
+}
+fn(); 
+                    </pre>
+                    <h3>6.</h3>
+                    <pre>
+fn();
+alert(a);
+var a = 0;
+alert(a);
+function fn(){
+    var a = 1;
+}
+                    </pre>
+                    <h3>7.</h3>
+                    <pre>
+fn();
+var a = 0;
+function fn() {
+alert(a);
+var a = 3;
+function c() {
+    alert(a);
+}
+return c;
+}
+                    </pre>
+                    <h3>8.</h3>
+                    <pre>
+var a = 1;
+function fn(){
+    alert(a);
+    a++;
+    alert(a);
+}
+fn(a);
+alert(a);
+                    </pre>
+                    <h3>9.</h3>
+                    <pre>
+var a = 1;
+function fn(a){
+ alert(a);
+ a++;
+ alert(a);
+}
+fn(a);
+alert(a);
+                    </pre>
+                </div>
+                <div>
+                    <h3>编程题</h3>
+                    <h3>1.实现一个遍历数组或对象里所有成员的迭代器。</h3>
+                    <pre>
+var each = function(obj, fn){
+        //+++++++++++答题区域+++++++++++
+        
+
+
+
+        //+++++++++++答题结束+++++++++++
+};
+
+try{
+        
+        var data1 = [4,5,6,7,8,9,10,11,12];
+        var data2 = {
+                "a": 4,
+                "b": 5,
+                "c": 6
+        };
+        
+        console.group(data1);
+        
+        each(data1, function(o){
+                if( 6 == this )
+                        return true;
+                else if( 8 == this )
+                        return false;
+                console.log(o + ": \"" + this + "\"");
+        });
+        
+        console.groupEnd();
+
+        /*------[执行结果]------
+
+        1: "4"
+        2: "5"
+        4: "7"
+
+        ------------------*/
+        
+        console.group(data2);
+        
+        each(data2, function(v, n){
+                if( 5 == this )
+                        return true;
+                console.log(n + ": \"" + v + "\"");
+        });
+        
+        console.groupEnd();
+
+        /*------[执行结果]------
+
+        a: "4"
+        c: "6"
+
+        ------------------*/
+        
+}catch(e){
+        console.error("执行出错，错误信息: " + e);
+}
+                    </pre>
+                    <h3>2.实现一个叫Man的类，包含attr, words, say三个方法。</h3>
+                    <pre>
+var Man;
+//+++++++++++答题区域+++++++++++
+
+
+
+
+
+//+++++++++++答题结束+++++++++++
+
+try{
+        
+        var me = Man({ fullname: "小红" });
+        var she = new Man({ fullname: "小红" });
+        
+        console.group();
+        console.info("我的名字是：" + me.attr("fullname") + "\n我的性别是：" + me.attr("gender"));
+        console.groupEnd();
+        /*------[执行结果]------
+
+        我的名字是：小红
+        我的性别是：<用户未输入>
+
+        ------------------*/
+
+        me.attr("fullname", "小明");
+        me.attr("gender", "男");
+        me.fullname = "废柴";
+        me.gender = "人妖"; 
+        she.attr("gender", "女");
+        
+        console.group();
+        console.info("我的名字是：" + me.attr("fullname") + "\n我的性别是：" + me.attr("gender"));
+        console.groupEnd();
+        /*------[执行结果]------
+
+        我的名字是：小明
+        我的性别是：男
+
+        ------------------*/
+        
+        console.group();
+        console.info("我的名字是：" + she.attr("fullname") + "\n我的性别是：" + she.attr("gender"));
+        console.groupEnd();
+        /*------[执行结果]------
+
+        我的名字是：小红
+        我的性别是：女
+
+        ------------------*/
+
+        me.attr({
+                "words-limit": 3,
+                "words-emote": "微笑"
+        });
+        me.words("我喜欢看视频。");
+        me.words("我们的办公室太漂亮了。");
+        me.words("视频里美女真多！");
+        me.words("我平时都看优酷！");
+        
+        console.group();
+        console.log(me.say());
+        /*------[执行结果]------
+
+        小明微笑："我喜欢看视频。我们的办公室太漂亮了。视频里美女真多！"
+
+        ------------------*/
+
+        me.attr({
+                "words-limit": 2,
+                "words-emote": "喊"
+        });
+
+        console.log(me.say());
+        console.groupEnd();
+        /*------[执行结果]------
+
+        小明喊："我喜欢看视频。我们的办公室太漂亮了。"
+
+        ------------------*/
+        
+}catch(e){
+        console.error("执行出错，错误信息: " + e);
+}
+                    </pre>
+                    <h3>3.实现一个URI解析方法，把url里#之后的参数解析成指定的数据结构。</h3>
+                    <pre>
+function urlParser(s){
+        //+++++++++++答题区域+++++++++++
+
+
+
+                
+        //+++++++++++答题结束+++++++++++
+}
+
+try{
+        var url1 = "http://www.abc.com/m/s/#page/2/?type=latest_videos&page_size=20";
+        var url2 = "http://www.abc.com/m/s/#type=latest_videos&page_size=20";
+        var url3 = "http://www.abc.com/m/s/#page?type=latest_videos&page_size=20";
+
+        console.group();
+        console.info( urlParser(url1) );
+        console.info( urlParser(url2) );
+        console.info( urlParser(url3) );
+        console.groupEnd();
+        /*------[执行结果]------
+
+        ["page", "2", { "type": "latest_videos", "page_size": 20 }]
+        [{ "type": "latest_videos", "page_size": 20 }]
+        ["page", { "type": "latest_videos", "page_size": 20 }]
+        
+        ------------------*/
+        
+}catch(e){
+        console.error("执行出错，错误信息: " + e);
+}
+                    </pre>
+                    <h3>4.(1)小贤是一条可爱的小狗(Dog)，它的叫声很好听(wow)，每次看到主人的时候就会乖乖叫一声(yelp)。从这段描述写一个对象Dog</h3>
+                    <pre>
+function Dog() {
+       this.wow = function() {
+               alert(’Wow’);
+      }
+       this.yelp = function() {
+              this.wow();
+       }
+}   
+                    </pre>
+                    <h3>(2)小芒和小贤一样，原来也是一条可爱的小狗，可是突然有一天疯了(MadDog)，一看到人就会每隔半秒叫一声(wow)地不停叫唤(yelp)。请根据描述，按示例的形式用代码来实现（提示关键字: 继承，原型，setInterval）。</h3>
+                    <h3>5.请给Array本地对象增加一个原型方法，它的用途是删除数组条目中重复的条目(可能有多个)，返回值是一个包含被删除的重复条目的新数组。</h3>
+                    <pre>
+Array.prototype.distinct = function() {
+    
+    
+}
+</pre>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

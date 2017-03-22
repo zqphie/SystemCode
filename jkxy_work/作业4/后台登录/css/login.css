@@ -1,0 +1,59 @@
+.page-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	min-width: 600px;
+}
+.page-container .logoImg{
+	width: 100%;
+	height: 100%;
+}
+.main_box {
+    position: absolute; 
+    top:50%; 
+    left:50%; 
+    margin-top:-150px;
+    margin-left: -270px;
+    width:540px; 
+    height:300px;
+	background:url(../images/1.png);
+    border-radius: 10px;
+}
+.login_form {
+	font-size: 16px;
+	margin: 50px auto;
+}
+.login_box .form-control {
+	display: inline-block; 
+	zoom: 1; 
+	width: auto; 
+	font-size: 18px;
+}
+.login_box .form-control.x319 {
+	width: 319px;
+}
+.login_box .form-control.x164 {
+	width: 164px;
+}
+.login_box .form-group {
+	text-align: center;
+	margin: 0 auto 20px;
+}
+.login_box .form-group.space {
+	padding-top: 15px; 
+	border-top: 1px #FFF dotted;
+	text-align: center;
+}
+.login_box .form-group .sina-icon{
+	width: 130px;
+    height: 40px;
+    display: inline-block;
+    background: url(../images/dl.png) 0px -40px;
+    margin-left: -50px;
+}
+.login_box .form-group .sina-icon:active{
+	background-position: 0px 0px;
+}
+
